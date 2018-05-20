@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>Tags &middot; R Ubuntu Blog</title>
+  <title>Update on the Move to R 3.5.0 &middot; R Ubuntu Blog</title>
 
   
   
@@ -39,8 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="R Ubuntu Blog" href="/tags/index.xml" />
   
 
   
@@ -105,10 +103,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="/tags/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -216,28 +210,70 @@
 
 
 <div class="header">
-  <h1>Tags</h1>
+  <h1>Update on the Move to R 3.5.0</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  <ul>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 May 2018, 18:50</time>
+  </div>
+
+  
+
+  
+
   
   
-    <li>
-      <a href="c2d4u">c2d4u</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="r">r</a>
-      <span>&#40;1&#41;</span>
-    </li>
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/ubuntu">Ubuntu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/c2d4u">c2d4u</a>
+    
+  </div>
   
-    <li>
-      <a href="ubuntu">ubuntu</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-  </ul>
+
+</div>
+
+  <p>I am slowly rebuilding the set of packages in <a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u/+packages">c2d4u</a> for use with R 3.5.0. Since packages built under version 3.4.* are not compatible with 3.5.0, they all need to be rebuilt. This includes the packages that came with the new Ubuntu Bionic (18.04) release. It is taking some time.</p>
+<p>One of the challenges with using Launchpad is that once a package is built, it needs to be published. This takes some time (around 20 minutes). Therefore, you can’t just push a series of packages to Launchpad and walk away. In order to ensure the dependencies are built, you need to wait until they have been published in the PPA. This is on top of determining the build order based on dependencies.</p>
+<p>So part of the process has been writing an R script that takes a set of packages from a Task View, creates the dependency tree, and then determines which of the packages (could be 300+ with dependencies) are already available on the PPA. I also check to see if the most recent version is on the PPA. Then from the packages that need to be built, I determine which need to be built first, second, etc. Each set is sent to Launchpad, then I watch to see when the last package is published using the Launchpad API. I wait another four minutes (the API is a little premature), then send the next batch.</p>
+<p>Now that the bugs have been worked out, things are running smoothly. As I post this, the new repository has 1562 packages published for Xenial. In the current c2d4u PPA, there are 3783 packages for Xenial.</p>
+<p>As all the packages are not built yet, updating to R 3.5.0 via my PPAs will still break your system, which is why I have not officially announced the new PPA yet. As soon as the project is completed, I will let you know.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+
 </div>
 
 </div>
@@ -262,3 +298,4 @@
 
 </body>
 </html>
+
