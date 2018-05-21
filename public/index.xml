@@ -25,14 +25,11 @@ One of the challenges with using Launchpad is that once a package is built, it n
     <item>
       <title>About</title>
       <link>/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan. Coded in Vim using spf13-vim  Have questions or suggestions?</description>
+      <description>This website is dedicted to R and Ubuntu. Mainly, it will be about how to install R in Ubuntu, notes about the c2d4u PPA I maintain, building R related packages on Ubuntu, and using R in general.
+About Me I am currently the Associate Director of the School of Science at Penn State Behrend and an Associate Professor of Statistics at Behrend. I have been building R packages for Ubuntu for a very long time, since 2007.</description>
     </item>
     
     <item>
