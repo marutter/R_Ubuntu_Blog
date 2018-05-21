@@ -15,7 +15,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
   # Shown in the home page
   subtitle = "A blog about using R in Ubuntu and maintaing packages for Ubuntu"
-  brand = "Blackburn"
+  brand = "R Ubuntu"
   googleAnalytics = "Your Google Analytics tracking ID"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
