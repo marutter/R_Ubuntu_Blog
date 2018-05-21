@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 20 May 2018 18:50:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 20 May 2018 12:50:00 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Update on the Move to R 3.5.0</title>
       <link>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</link>
-      <pubDate>Sun, 20 May 2018 18:50:00 -0500</pubDate>
+      <pubDate>Sun, 20 May 2018 12:50:00 -0500</pubDate>
       
       <guid>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</guid>
       <description>I am slowly rebuilding the set of packages in c2d4u for use with R 3.5.0. Since packages built under version 3.4.* are not compatible with 3.5.0, they all need to be rebuilt. This includes the packages that came with the new Ubuntu Bionic (18.04) release. It is taking some time.
