@@ -1,7 +1,7 @@
 ---
 title: "Adding jq library to Trusty and Xenial PPAs"
 date: "2018-05-23T08:10:00-05:00"
-draft: true
+draft: false
 tags: [R,c2d4u]
 categories: [R,c2d4u]
 description: ""
