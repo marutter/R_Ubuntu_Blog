@@ -1,0 +1,14 @@
+---
+title: "Adding jq to Trusty and Xenial PPAs"
+date: "2018-05-23T08:10:00-05:00"
+draft: true
+tags: [R,c2d4u]
+categories: [R,c2d4u]
+description: ""
+---
+
+One of the advantages of using Launchpad's PPA system is that it allows you to easily use the work of others backporting packages to older releases.
+
+For example, the package [`jgr`](https://cran.r-project.org/web/packages/jqr/index.html) has a build requirement of libjq.  [jq](https://stedolan.github.io/jq/) is a command-line JSON processor, and the `jqr` package is required by a small number of other R packages, either directly or indirectly.  The Ubuntu packages libjq-dev is available in Bionic, but not be default in Trusty or Xenial.
+
+Luckily a [PPA](https://launchpad.net/~opencpu/+archive/ubuntu/jq) exists with its only purpose to provide backports for this library.  This PPA has been added to PPA dependencies for the rebuild of c2d4u for R 3.5.  You may need to enable that PPA in your system if you are interested in using packages requiring jq.  Thanks to [OpenCPU](https://www.opencpu.org/) for the jq backport.

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 22 May 2018 20:52:49 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 23 May 2018 08:10:00 -0500</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adding jq to Trusty and Xenial PPAs</title>
+      <link>/post/2018-05-23-adding-jq-trusty-xenial/</link>
+      <pubDate>Wed, 23 May 2018 08:10:00 -0500</pubDate>
+      
+      <guid>/post/2018-05-23-adding-jq-trusty-xenial/</guid>
+      <description>One of the advantages of using Launchpad’s PPA system is that it allows you to easily use the work of others backporting packages to older releases.
+For example, the package jgr has a build requirement of libjq. jq is a command-line JSON processor, and the jqr package is required by a small number of other R packages, either directly or indirectly. The Ubuntu packages libjq-dev is available in Bionic, but not be default in Trusty or Xenial.</description>
+    </item>
     
     <item>
       <title>Replacing weatherunderground.com data with...weatherunderground?</title>

@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>Tags &middot; R Ubuntu Blog</title>
+  <title>Adding jq to Trusty and Xenial PPAs &middot; R Ubuntu Blog</title>
 
   
   
@@ -39,8 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="R Ubuntu Blog" href="/tags/index.xml" />
   
 
   
@@ -105,10 +103,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="/tags/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -216,33 +210,72 @@
 
 
 <div class="header">
-  <h1>Tags</h1>
+  <h1>Adding jq to Trusty and Xenial PPAs</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  <ul>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 May 2018, 08:10</time>
+  </div>
+
+  
+
+  
+
   
   
-    <li>
-      <a href="r">r</a>
-      <span>&#40;3&#41;</span>
-    </li>
   
-    <li>
-      <a href="c2d4u">c2d4u</a>
-      <span>&#40;2&#41;</span>
-    </li>
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/c2d4u">c2d4u</a>
+    
+  </div>
   
-    <li>
-      <a href="ubuntu">ubuntu</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="webscraping">webscraping</a>
-      <span>&#40;1&#41;</span>
-    </li>
+
+</div>
+
+  <p>One of the advantages of using Launchpad’s PPA system is that it allows you to easily use the work of others backporting packages to older releases.</p>
+<p>For example, the package <a href="https://cran.r-project.org/web/packages/jqr/index.html"><code>jgr</code></a> has a build requirement of libjq. <a href="https://stedolan.github.io/jq/">jq</a> is a command-line JSON processor, and the <code>jqr</code> package is required by a small number of other R packages, either directly or indirectly. The Ubuntu packages libjq-dev is available in Bionic, but not be default in Trusty or Xenial.</p>
+<p>Luckily a <a href="https://launchpad.net/~opencpu/+archive/ubuntu/jq">PPA</a> exists with its only purpose to provide backports for this library. This PPA has been added to PPA dependencies for the rebuild of c2d4u for R 3.5. You may need to enable that PPA in your system if you are interested in using packages requiring jq. Thanks to <a href="https://www.opencpu.org/">OpenCPU</a> for the jq backport.</p>
+
+
   
-  </ul>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/">Replacing weatherunderground.com data with...weatherunderground?</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+
 </div>
 
 </div>
@@ -267,3 +300,4 @@
 
 </body>
 </html>
+
