@@ -1,0 +1,30 @@
+---
+title: "Replacing weatherunderground.com data with...weatherunderground?"
+date: "2018-05-22T20:52:49-04:00"
+draft: true
+tags: [R,webscraping]
+categories: [R,webscraping]
+description: ""
+---
+
+
+
+<p>One of the research projects I have been working on for many years is a model that predicts <em>E. coli</em> levels at <a href="http://www.dcnr.pa.gov/StateParks/FindAPark/PresqueIsleStatePark/Pages/default.aspx">Presque Isle State Park</a> beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.</p>
+<p>An important data source for the model is weather data collected at the Erie International Airport, located a couple of miles from the park entrance. I used airport data as opposed to other data sources located at the park due to consistency of data collection, both historically and for future predictions. A wonderful place to get the data of the internet <em>was</em> weatherunderground.com. Very simple URL structure, and there was an option on every page to download the main data table as a .csv file. Since my model only needed to request data twice from the website to run, it was a great solution.</p>
+<p>Then weatherunderground.com was bought by IBM in 2015. In late 2017, the csv option was removed from the website, but the API was still in place. Then earlier this year, the free API was discontinued and the only way to access the data is to buy access at a price unspecified on the website. I won’t even begin the discussion that we have been feeding data into weatherunderground.com from a personal weather station at my house for the last three years, and now have lost access to that data. Needless to say, my model broke. A couple of R packages were discontinued as a result (<code>rwundergound</code> and <code>weatherData</code>) of the policy changes.</p>
+<p>As we prepare for another swimming season, it was off to find another data source. Trick was finding a source that matched the data I had already collected and utilized by the model. My search came up short, as no single source of data had the same information. So reluctantly, I returned to weatherunderground.com The data that I need was on the web page, I would just have to scrape it using <code>rvest</code>. With a little help from Chrome to find the XPath, I can download a summer’s worth of data for KERI.</p>
+<pre class="r"><code>library(rvest)
+summer.weather.url &lt;- &quot;https://www.wunderground.com/history/airport/KERI/2017/5/1/CustomHistory.html?dayend=31&amp;monthend=9&amp;yearend=2017&amp;req_city=&amp;req_state=&amp;req_statename=&amp;reqdb.zip=&amp;reqdb.magic=&amp;reqdb.wmo=&quot;
+summer.weather.url %&gt;%
+  read_html() %&gt;%
+  html_nodes(xpath=&#39;//*[@id=&quot;obsTable&quot;]&#39;) %&gt;%
+  html_table(fill=TRUE) -&gt; summer.weather
+summer.weather[[1]]</code></pre>
+<p>This almost works. If you visit the <a href="https://www.wunderground.com/history/airport/KERI/2017/5/1/CustomHistory.html?dayend=31&amp;monthend=9&amp;yearend=2017&amp;req_city=&amp;req_state=&amp;req_statename=&amp;reqdb.zip=&amp;reqdb.magic=&amp;reqdb.wmo=">page</a> you will see the table is formatted horribly. The column names take up two rows, and are repeated (in the middle of the table) for every new month. Since I only need to do this once a year, it was easier for me to just open the .csv file in LibreOffice to clean the data.</p>
+<p>But weatherundergound.com also eliminated two variables from their daily data summary, average wind direction (important variable) and cloud cover (not so important). And while it would be possible to calculate average wind direction from raw data, I wanted to keep things simple. These two variables are available from <a href="https://darksky.net/dev">Dark Sky</a> and their API. Although a paid service, Dark Sky has a trial plan with a limit of 1000 calls per day. This is more than sufficient for my needs, and there is a R package <a href="https://cran.r-project.org/web/packages/darksky/index.html"><code>darksky</code></a>.</p>
+<pre class="r"><code>library(darksky)
+DARKSKY_API_KEY=&quot;[your_secret_key]&quot;
+daily &lt;- get_forecast_for(42.0803,-80.1824,&quot;2017-05-01T12:00:00-0500&quot;,exclude =&quot;hourly,currently&quot;)
+daily[[1]]$windBearing
+daily[[1]]$cloudCover</code></pre>
+<p>Combining these two data sources recreates what weatherunderground.com used to provide. It should be noted that Dark Sky has a slightly different definition of a day for their API, calculating daily averages from 4AM to 4AM, not midnight to midnight. I compared data for previous years and the differences were negligible. While not a perfect solution, it is enough to keep RoboHarry running.</p>

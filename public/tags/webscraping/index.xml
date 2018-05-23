@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on R Ubuntu Blog</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on R Ubuntu Blog</description>
+    <title>Webscraping on R Ubuntu Blog</title>
+    <link>/tags/webscraping/</link>
+    <description>Recent content in Webscraping on R Ubuntu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Tue, 22 May 2018 20:52:49 -0400</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/</guid>
       <description>One of the research projects I have been working on for many years is a model that predicts E. coli levels at Presque Isle State Park beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.</description>
-    </item>
-    
-    <item>
-      <title>Update on the Move to R 3.5.0</title>
-      <link>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</link>
-      <pubDate>Sun, 20 May 2018 12:50:00 -0500</pubDate>
-      
-      <guid>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</guid>
-      <description>I am slowly rebuilding the set of packages in c2d4u for use with R 3.5.0. Since packages built under version 3.4.* are not compatible with 3.5.0, they all need to be rebuilt. This includes the packages that came with the new Ubuntu Bionic (18.04) release. It is taking some time.
-One of the challenges with using Launchpad is that once a package is built, it needs to be published. This takes some time (around 20 minutes).</description>
     </item>
     
   </channel>
