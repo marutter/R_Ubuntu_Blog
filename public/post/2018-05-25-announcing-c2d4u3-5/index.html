@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>R &middot; R Ubuntu Blog</title>
+  <title>Announcing cran2deb4ubuntu3.5 &middot; R Ubuntu Blog</title>
 
   
   
@@ -39,8 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="R Ubuntu Blog" href="/tags/r/index.xml" />
   
 
   
@@ -105,10 +103,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="/tags/r/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -216,16 +210,12 @@
 
 
 <div class="header">
-  <h1>R</h1>
+  <h1>Announcing cran2deb4ubuntu3.5</h1>
+  <h2></h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="/post/2018-05-25-announcing-c2d4u3-5/">Announcing cran2deb4ubuntu3.5</a></h2>
 
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
@@ -256,161 +246,48 @@
 
 </div>
 
-  </header>
+  <p>After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: <a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5" class="uri">https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5</a></p>
+<p>Many things to consider before you add this PPA to your Ubuntu machine.</p>
+<ul>
+<li><p>The PPA supplies binaries for Trusty (14.04), Xenial (16.04), and Bionic (18.04).</p></li>
+<li><p>They binaries are built against based on R 3.5.0, which is why a new PPA was required. If you are looking for packages for R 3.4.*, you can use <a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u">c2d4u</a>.</p></li>
+<li><p>If you are looking for R 3.5.0 binaries for all current flavors of Ubuntu, I have another <a href="https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5">PPA</a>. c2d4u3.5 requires this PPA to work correctly.</p></li>
+<li><p>The packages available on c2d4u3.5 are all the packages I can get to build based on what is available from all <a href="https://cran.r-project.org/web/views/">CRAN Task Views</a>, and a couple of extra packages. It is over 3,400 r-cran packages, and they are updated about once a week. Expect a big update tomorrow (May 27th).</p></li>
+<li><p>Some packages require other PPAs to install. They include <a href="https://launchpad.net/~kirillshkrogalev/+archive/ubuntu/ffmpeg-next">FFmpeg next</a>, <a href="https://launchpad.net/~opencpu/+archive/ubuntu/jq">jq</a>, and <a href="https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa">ubuntugis-stable</a>. Only a small number of packages require these additional PPAs, but if you install fails, these might be the solution.</p></li>
+<li><p>If you decide to utilize this PPA, please let me know if something is not working. There is no way I can test all 3,400+ packages and there are always little things that I miss. If there are issues, please contact me via email at marutter[at]gmail.com.</p></li>
+<li><p>You may have a favorite package that is not on c2d4u3.5 or c2d4u. To ensure some sanity in my life, I have limited the packages to those on the CRAN Task Views. So the best way to get the package on c2d4u is to have added to a Task View. Requests to add individual packages may be ignored until I find time to respond.</p></li>
+</ul>
 
-  <p>
-  After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5
-Many things to consider before you add this PPA to your Ubuntu machine.
- The PPA supplies binaries for Trusty (14.04), Xenial (16.04), and Bionic (18.
-  </p>
-
-  
-  <footer>
-    <a href="/post/2018-05-25-announcing-c2d4u3-5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
 
   
-    <article>
-  <header>
-    <h2><a href="/post/2018-05-23-adding-jq-trusty-xenial/">Adding jq library to Trusty and Xenial PPAs</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 May 2018, 08:10</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
     
-      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/c2d4u">c2d4u</a>
+    <a href="/post/2018-05-23-adding-jq-trusty-xenial/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
-  
-  
-
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2018-05-23-adding-jq-trusty-xenial/">Adding jq library to Trusty and Xenial PPAs</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
 </div>
 
-  </header>
 
-  <p>
-  One of the advantages of using Launchpad’s PPA system is that it allows you to easily use the work of others backporting packages to older releases.
-For example, the package jgr has a build requirement of libjq. jq is a command-line JSON processor, and the jqr package is required by a small number of other R packages, either directly or indirectly. The Ubuntu packages libjq-dev is available in Bionic, but not be default in Trusty or Xenial.
-  </p>
-
-  
-  <footer>
-    <a href="/post/2018-05-23-adding-jq-trusty-xenial/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/">Replacing weatherunderground.com data with...weatherunderground?</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>22 May 2018, 20:52</time>
-  </div>
 
   
 
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/webscraping">webscraping</a>
-    
-  </div>
-  
-  
-
-</div>
-
-  </header>
-
-  <p>
-  One of the research projects I have been working on for many years is a model that predicts E. coli levels at Presque Isle State Park beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.
-  </p>
-
-  
-  <footer>
-    <a href="/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/">Update on the Move to R 3.5.0</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 May 2018, 12:50</time>
-  </div>
-
-  
-
-  
-
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/ubuntu">Ubuntu</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="/tags/c2d4u">c2d4u</a>
-    
-  </div>
-  
-  
-
-</div>
-
-  </header>
-
-  <p>
-  I am slowly rebuilding the set of packages in c2d4u for use with R 3.5.0. Since packages built under version 3.4.* are not compatible with 3.5.0, they all need to be rebuilt. This includes the packages that came with the new Ubuntu Bionic (18.04) release. It is taking some time.
-One of the challenges with using Launchpad is that once a package is built, it needs to be published. This takes some time (around 20 minutes).
-  </p>
-
-  
-  <footer>
-    <a href="/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
 </div>
 
 </div>
@@ -435,3 +312,4 @@ One of the challenges with using Launchpad is that once a package is built, it n
 
 </body>
 </html>
+

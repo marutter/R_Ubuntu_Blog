@@ -1,0 +1,22 @@
+---
+title: "Announcing cran2deb4ubuntu3.5"
+date: "2018-05-26T14:48:00-05:00"
+draft: false
+tags: [R,c2d4u,Ubuntu,3.5]
+categories: [R,c2d4u,Ubuntu,3.5]
+description: ""
+---
+
+
+
+<p>After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: <a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5" class="uri">https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5</a></p>
+<p>Many things to consider before you add this PPA to your Ubuntu machine.</p>
+<ul>
+<li><p>The PPA supplies binaries for Trusty (14.04), Xenial (16.04), and Bionic (18.04).</p></li>
+<li><p>They binaries are built against based on R 3.5.0, which is why a new PPA was required. If you are looking for packages for R 3.4.*, you can use <a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u">c2d4u</a>.</p></li>
+<li><p>If you are looking for R 3.5.0 binaries for all current flavors of Ubuntu, I have another <a href="https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5">PPA</a>. c2d4u3.5 requires this PPA to work correctly.</p></li>
+<li><p>The packages available on c2d4u3.5 are all the packages I can get to build based on what is available from all <a href="https://cran.r-project.org/web/views/">CRAN Task Views</a>, and a couple of extra packages. It is over 3,400 r-cran packages, and they are updated about once a week. Expect a big update tomorrow (May 27th).</p></li>
+<li><p>Some packages require other PPAs to install. They include <a href="https://launchpad.net/~kirillshkrogalev/+archive/ubuntu/ffmpeg-next">FFmpeg next</a>, <a href="https://launchpad.net/~opencpu/+archive/ubuntu/jq">jq</a>, and <a href="https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa">ubuntugis-stable</a>. Only a small number of packages require these additional PPAs, but if you install fails, these might be the solution.</p></li>
+<li><p>If you decide to utilize this PPA, please let me know if something is not working. There is no way I can test all 3,400+ packages and there are always little things that I miss. If there are issues, please contact me via email at marutter[at]gmail.com.</p></li>
+<li><p>You may have a favorite package that is not on c2d4u3.5 or c2d4u. To ensure some sanity in my life, I have limited the packages to those on the CRAN Task Views. So the best way to get the package on c2d4u is to have added to a Task View. Requests to add individual packages may be ignored until I find time to respond.</p></li>
+</ul>

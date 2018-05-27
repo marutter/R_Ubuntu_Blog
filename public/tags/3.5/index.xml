@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ubuntu on R Ubuntu Blog</title>
-    <link>/tags/ubuntu/</link>
-    <description>Recent content in Ubuntu on R Ubuntu Blog</description>
+    <title>3.5 on R Ubuntu Blog</title>
+    <link>/tags/3.5/</link>
+    <description>Recent content in 3.5 on R Ubuntu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sat, 26 May 2018 14:48:00 -0500</lastBuildDate>
     
-	<atom:link href="/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/3.5/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,16 +21,6 @@
       <description>After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5
 Many things to consider before you add this PPA to your Ubuntu machine.
  The PPA supplies binaries for Trusty (14.04), Xenial (16.04), and Bionic (18.</description>
-    </item>
-    
-    <item>
-      <title>Update on the Move to R 3.5.0</title>
-      <link>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</link>
-      <pubDate>Sun, 20 May 2018 12:50:00 -0500</pubDate>
-      
-      <guid>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</guid>
-      <description>I am slowly rebuilding the set of packages in c2d4u for use with R 3.5.0. Since packages built under version 3.4.* are not compatible with 3.5.0, they all need to be rebuilt. This includes the packages that came with the new Ubuntu Bionic (18.04) release. It is taking some time.
-One of the challenges with using Launchpad is that once a package is built, it needs to be published. This takes some time (around 20 minutes).</description>
     </item>
     
   </channel>

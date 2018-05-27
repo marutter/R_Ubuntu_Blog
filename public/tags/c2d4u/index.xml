@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 23 May 2018 08:10:00 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 26 May 2018 14:48:00 -0500</lastBuildDate>
     
 	<atom:link href="/tags/c2d4u/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Announcing cran2deb4ubuntu3.5</title>
+      <link>/post/2018-05-25-announcing-c2d4u3-5/</link>
+      <pubDate>Sat, 26 May 2018 14:48:00 -0500</pubDate>
+      
+      <guid>/post/2018-05-25-announcing-c2d4u3-5/</guid>
+      <description>After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5
+Many things to consider before you add this PPA to your Ubuntu machine.
+ The PPA supplies binaries for Trusty (14.04), Xenial (16.04), and Bionic (18.</description>
+    </item>
     
     <item>
       <title>Adding jq library to Trusty and Xenial PPAs</title>
