@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on R Ubuntu Blog</title>
-    <link>/tags/r/</link>
+    <link>/topics/r/</link>
     <description>Recent content in R on R Ubuntu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Sun, 27 May 2018 19:01:26 -0400</lastBuildDate>
     
-        <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/topics/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -952,80 +952,6 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Announcing cran2deb4ubuntu3.5</title>
-      <link>/post/2018-05-25-announcing-c2d4u3-5/</link>
-      <pubDate>Sat, 26 May 2018 14:48:00 -0500</pubDate>
-      
-      <guid>/post/2018-05-25-announcing-c2d4u3-5/</guid>
-      <description>&lt;p&gt;After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34; class=&#34;uri&#34;&gt;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Many things to consider before you add this PPA to your Ubuntu machine.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The PPA supplies binaries for Trusty (14.04), Xenial (16.04), and Bionic (18.04).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;They binaries are built against based on R 3.5.0, which is why a new PPA was required. If you are looking for packages for R 3.4.*, you can use &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u&#34;&gt;c2d4u&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;If you are looking for R 3.5.0 binaries for all current flavors of Ubuntu, I have another &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5&#34;&gt;PPA&lt;/a&gt;. c2d4u3.5 requires this PPA to work correctly.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The packages available on c2d4u3.5 are all the packages I can get to build based on what is available from all &lt;a href=&#34;https://cran.r-project.org/web/views/&#34;&gt;CRAN Task Views&lt;/a&gt;, and a couple of extra packages. It is over 3,400 r-cran packages, and they are updated about once a week. Expect a big update tomorrow (May 27th).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some packages require other PPAs to install. They include &lt;a href=&#34;https://launchpad.net/~kirillshkrogalev/+archive/ubuntu/ffmpeg-next&#34;&gt;FFmpeg next&lt;/a&gt;, &lt;a href=&#34;https://launchpad.net/~opencpu/+archive/ubuntu/jq&#34;&gt;jq&lt;/a&gt;, and &lt;a href=&#34;https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa&#34;&gt;ubuntugis-stable&lt;/a&gt;. Only a small number of packages require these additional PPAs, but if you install fails, these might be the solution.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;If you decide to utilize this PPA, please let me know if something is not working. There is no way I can test all 3,400+ packages and there are always little things that I miss. If there are issues, please contact me via email at marutter[at]gmail.com.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;You may have a favorite package that is not on c2d4u3.5 or c2d4u. To ensure some sanity in my life, I have limited the packages to those on the CRAN Task Views. So the best way to get the package on c2d4u is to have added to a Task View. Requests to add individual packages may be ignored until I find time to respond.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Adding jq library to Trusty and Xenial PPAs</title>
-      <link>/post/2018-05-23-adding-jq-trusty-xenial/</link>
-      <pubDate>Wed, 23 May 2018 08:10:00 -0500</pubDate>
-      
-      <guid>/post/2018-05-23-adding-jq-trusty-xenial/</guid>
-      <description>&lt;p&gt;One of the advantages of using Launchpad’s PPA system is that it allows you to easily use the work of others backporting packages to older releases.&lt;/p&gt;
-&lt;p&gt;For example, the package &lt;a href=&#34;https://cran.r-project.org/web/packages/jqr/index.html&#34;&gt;&lt;code&gt;jgr&lt;/code&gt;&lt;/a&gt; has a build requirement of libjq. &lt;a href=&#34;https://stedolan.github.io/jq/&#34;&gt;jq&lt;/a&gt; is a command-line JSON processor, and the &lt;code&gt;jqr&lt;/code&gt; package is required by a small number of other R packages, either directly or indirectly. The Ubuntu packages libjq-dev is available in Bionic, but not be default in Trusty or Xenial.&lt;/p&gt;
-&lt;p&gt;Luckily a &lt;a href=&#34;https://launchpad.net/~opencpu/+archive/ubuntu/jq&#34;&gt;PPA&lt;/a&gt; exists with its only purpose to provide backports for this library. This PPA has been added to PPA dependencies for the rebuild of c2d4u for R 3.5. You may need to enable that PPA in your system if you are interested in using packages requiring jq. Thanks to &lt;a href=&#34;https://www.opencpu.org/&#34;&gt;OpenCPU&lt;/a&gt; for the jq backport.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Replacing weatherunderground.com data with...weatherunderground?</title>
-      <link>/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/</link>
-      <pubDate>Tue, 22 May 2018 20:52:49 -0400</pubDate>
-      
-      <guid>/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/</guid>
-      <description>&lt;p&gt;One of the research projects I have been working on for many years is a model that predicts &lt;em&gt;E. coli&lt;/em&gt; levels at &lt;a href=&#34;http://www.dcnr.pa.gov/StateParks/FindAPark/PresqueIsleStatePark/Pages/default.aspx&#34;&gt;Presque Isle State Park&lt;/a&gt; beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.&lt;/p&gt;
-&lt;p&gt;An important data source for the model is weather data collected at the Erie International Airport, located a couple of miles from the park entrance. I used airport data as opposed to other data sources located at the park due to consistency of data collection, both historically and for future predictions. A wonderful place to get the data of the internet &lt;em&gt;was&lt;/em&gt; weatherunderground.com. Very simple URL structure, and there was an option on every page to download the main data table as a .csv file. Since my model only needed to request data twice from the website to run, it was a great solution.&lt;/p&gt;
-&lt;p&gt;Then weatherunderground.com was bought by IBM in 2015. In late 2017, the csv option was removed from the website, but the API was still in place. Then earlier this year, the free API was discontinued and the only way to access the data is to buy access at a price unspecified on the website. I won’t even begin the discussion that we have been feeding data into weatherunderground.com from a personal weather station at my house for the last three years, and now have lost access to that data. Needless to say, my model broke. A couple of R packages (&lt;code&gt;rwundergound&lt;/code&gt; and &lt;code&gt;weatherData&lt;/code&gt;) were discontinued as a result of the policy changes.&lt;/p&gt;
-&lt;p&gt;As we prepare for another swimming season, it was off to find another data source. Trick was finding a source that matched the data I had already collected and utilized by the model. My search came up short, as no single source of data had the same information. So reluctantly, I returned to weatherunderground.com The data that I need was on the web page, I would just have to scrape it using &lt;code&gt;rvest&lt;/code&gt;. With a little help from Chrome to find the XPath, I can download a summer’s worth of data for KERI.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)
-summer.weather.url &amp;lt;- &amp;quot;https://www.wunderground.com/history/airport/KERI/2017/5/1/CustomHistory.html?dayend=31&amp;amp;monthend=9&amp;amp;yearend=2017&amp;amp;req_city=&amp;amp;req_state=&amp;amp;req_statename=&amp;amp;reqdb.zip=&amp;amp;reqdb.magic=&amp;amp;reqdb.wmo=&amp;quot;
-summer.weather.url %&amp;gt;%
-  read_html() %&amp;gt;%
-  html_nodes(xpath=&amp;#39;//*[@id=&amp;quot;obsTable&amp;quot;]&amp;#39;) %&amp;gt;%
-  html_table(fill=TRUE) -&amp;gt; summer.weather
-summer.weather[[1]]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This almost works. If you visit the &lt;a href=&#34;https://www.wunderground.com/history/airport/KERI/2017/5/1/CustomHistory.html?dayend=31&amp;amp;monthend=9&amp;amp;yearend=2017&amp;amp;req_city=&amp;amp;req_state=&amp;amp;req_statename=&amp;amp;reqdb.zip=&amp;amp;reqdb.magic=&amp;amp;reqdb.wmo=&#34;&gt;page&lt;/a&gt; you will see the table is formatted horribly. The column names take up two rows, and are repeated (in the middle of the table) for every new month. Since I only need to do this once a year, it was easier for me to just open the .csv file in LibreOffice to clean the data.&lt;/p&gt;
-&lt;p&gt;But weatherundergound.com also eliminated two variables from their daily data summary, average wind direction (important variable) and cloud cover (not so important). And while it would be possible to calculate average wind direction from raw data, I wanted to keep things simple. These two variables are available from &lt;a href=&#34;https://darksky.net/dev&#34;&gt;Dark Sky&lt;/a&gt; and their API. Although a paid service, Dark Sky has a trial plan with a limit of 1000 calls per day. This is more than sufficient for my needs, and there is a R package &lt;a href=&#34;https://cran.r-project.org/web/packages/darksky/index.html&#34;&gt;&lt;code&gt;darksky&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(darksky)
-DARKSKY_API_KEY=&amp;quot;[your_secret_key]&amp;quot;
-daily &amp;lt;- get_forecast_for(42.0803,-80.1824,&amp;quot;2017-05-01T12:00:00-0500&amp;quot;,exclude =&amp;quot;hourly,currently&amp;quot;)
-daily[[1]]$windBearing
-daily[[1]]$cloudCover&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Combining these two data sources recreates what weatherunderground.com used to provide. It should be noted that Dark Sky has a slightly different definition of a day for their API, calculating daily averages from 4AM to 4AM, not midnight to midnight. I compared data for previous years and the differences were negligible. While not a perfect solution, it is enough to keep RoboHarry running.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Update on the Move to R 3.5.0</title>
-      <link>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</link>
-      <pubDate>Sun, 20 May 2018 12:50:00 -0500</pubDate>
-      
-      <guid>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</guid>
-      <description>&lt;p&gt;I am slowly rebuilding the set of packages in &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u/+packages&#34;&gt;c2d4u&lt;/a&gt; for use with R 3.5.0. Since packages built under version 3.4.* are not compatible with 3.5.0, they all need to be rebuilt. This includes the packages that came with the new Ubuntu Bionic (18.04) release. It is taking some time.&lt;/p&gt;
-&lt;p&gt;One of the challenges with using Launchpad is that once a package is built, it needs to be published. This takes some time (around 20 minutes). Therefore, you can’t just push a series of packages to Launchpad and walk away. In order to ensure the dependencies are built, you need to wait until they have been published in the PPA. This is on top of determining the build order based on dependencies.&lt;/p&gt;
-&lt;p&gt;So part of the process has been writing an R script that takes a set of packages from a Task View, creates the dependency tree, and then determines which of the packages (could be 300+ with dependencies) are already available on the PPA. I also check to see if the most recent version is on the PPA. Then from the packages that need to be built, I determine which need to be built first, second, etc. Each set is sent to Launchpad, then I watch to see when the last package is published using the Launchpad API. I wait another four minutes (the API is a little premature), then send the next batch.&lt;/p&gt;
-&lt;p&gt;Now that the bugs have been worked out, things are running smoothly. As I post this, the new repository has 1583 packages published for Xenial. In the current c2d4u PPA, there are 3783 packages for Xenial.&lt;/p&gt;
-&lt;p&gt;As all the packages are not built yet, updating to R 3.5.0 via my PPAs will still break your system, which is why I have not officially announced the new PPA yet. As soon as the project is completed, I will let you know.&lt;/p&gt;
 </description>
     </item>
     

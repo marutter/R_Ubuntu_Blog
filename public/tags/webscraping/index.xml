@@ -9,7 +9,7 @@
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
     <lastBuildDate>Tue, 22 May 2018 20:52:49 -0400</lastBuildDate>
     
-	<atom:link href="/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,26 @@
       <pubDate>Tue, 22 May 2018 20:52:49 -0400</pubDate>
       
       <guid>/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/</guid>
-      <description>One of the research projects I have been working on for many years is a model that predicts E. coli levels at Presque Isle State Park beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.</description>
+      <description>&lt;p&gt;One of the research projects I have been working on for many years is a model that predicts &lt;em&gt;E. coli&lt;/em&gt; levels at &lt;a href=&#34;http://www.dcnr.pa.gov/StateParks/FindAPark/PresqueIsleStatePark/Pages/default.aspx&#34;&gt;Presque Isle State Park&lt;/a&gt; beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.&lt;/p&gt;
+&lt;p&gt;An important data source for the model is weather data collected at the Erie International Airport, located a couple of miles from the park entrance. I used airport data as opposed to other data sources located at the park due to consistency of data collection, both historically and for future predictions. A wonderful place to get the data of the internet &lt;em&gt;was&lt;/em&gt; weatherunderground.com. Very simple URL structure, and there was an option on every page to download the main data table as a .csv file. Since my model only needed to request data twice from the website to run, it was a great solution.&lt;/p&gt;
+&lt;p&gt;Then weatherunderground.com was bought by IBM in 2015. In late 2017, the csv option was removed from the website, but the API was still in place. Then earlier this year, the free API was discontinued and the only way to access the data is to buy access at a price unspecified on the website. I won’t even begin the discussion that we have been feeding data into weatherunderground.com from a personal weather station at my house for the last three years, and now have lost access to that data. Needless to say, my model broke. A couple of R packages (&lt;code&gt;rwundergound&lt;/code&gt; and &lt;code&gt;weatherData&lt;/code&gt;) were discontinued as a result of the policy changes.&lt;/p&gt;
+&lt;p&gt;As we prepare for another swimming season, it was off to find another data source. Trick was finding a source that matched the data I had already collected and utilized by the model. My search came up short, as no single source of data had the same information. So reluctantly, I returned to weatherunderground.com The data that I need was on the web page, I would just have to scrape it using &lt;code&gt;rvest&lt;/code&gt;. With a little help from Chrome to find the XPath, I can download a summer’s worth of data for KERI.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)
+summer.weather.url &amp;lt;- &amp;quot;https://www.wunderground.com/history/airport/KERI/2017/5/1/CustomHistory.html?dayend=31&amp;amp;monthend=9&amp;amp;yearend=2017&amp;amp;req_city=&amp;amp;req_state=&amp;amp;req_statename=&amp;amp;reqdb.zip=&amp;amp;reqdb.magic=&amp;amp;reqdb.wmo=&amp;quot;
+summer.weather.url %&amp;gt;%
+  read_html() %&amp;gt;%
+  html_nodes(xpath=&amp;#39;//*[@id=&amp;quot;obsTable&amp;quot;]&amp;#39;) %&amp;gt;%
+  html_table(fill=TRUE) -&amp;gt; summer.weather
+summer.weather[[1]]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This almost works. If you visit the &lt;a href=&#34;https://www.wunderground.com/history/airport/KERI/2017/5/1/CustomHistory.html?dayend=31&amp;amp;monthend=9&amp;amp;yearend=2017&amp;amp;req_city=&amp;amp;req_state=&amp;amp;req_statename=&amp;amp;reqdb.zip=&amp;amp;reqdb.magic=&amp;amp;reqdb.wmo=&#34;&gt;page&lt;/a&gt; you will see the table is formatted horribly. The column names take up two rows, and are repeated (in the middle of the table) for every new month. Since I only need to do this once a year, it was easier for me to just open the .csv file in LibreOffice to clean the data.&lt;/p&gt;
+&lt;p&gt;But weatherundergound.com also eliminated two variables from their daily data summary, average wind direction (important variable) and cloud cover (not so important). And while it would be possible to calculate average wind direction from raw data, I wanted to keep things simple. These two variables are available from &lt;a href=&#34;https://darksky.net/dev&#34;&gt;Dark Sky&lt;/a&gt; and their API. Although a paid service, Dark Sky has a trial plan with a limit of 1000 calls per day. This is more than sufficient for my needs, and there is a R package &lt;a href=&#34;https://cran.r-project.org/web/packages/darksky/index.html&#34;&gt;&lt;code&gt;darksky&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(darksky)
+DARKSKY_API_KEY=&amp;quot;[your_secret_key]&amp;quot;
+daily &amp;lt;- get_forecast_for(42.0803,-80.1824,&amp;quot;2017-05-01T12:00:00-0500&amp;quot;,exclude =&amp;quot;hourly,currently&amp;quot;)
+daily[[1]]$windBearing
+daily[[1]]$cloudCover&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Combining these two data sources recreates what weatherunderground.com used to provide. It should be noted that Dark Sky has a slightly different definition of a day for their API, calculating daily averages from 4AM to 4AM, not midnight to midnight. I compared data for previous years and the differences were negligible. While not a perfect solution, it is enough to keep RoboHarry running.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

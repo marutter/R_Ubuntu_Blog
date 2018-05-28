@@ -7,9 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 27 May 2018 19:01:26 -0400</lastBuildDate>
     
-	<atom:link href="/topics/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/topics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C2d4u</title>
+      <link>/topics/c2d4u/</link>
+      <pubDate>Sun, 27 May 2018 19:01:26 -0400</pubDate>
+      
+      <guid>/topics/c2d4u/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/topics/r/</link>
+      <pubDate>Sun, 27 May 2018 19:01:26 -0400</pubDate>
+      
+      <guid>/topics/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>/topics/ubuntu/</link>
+      <pubDate>Sun, 27 May 2018 19:01:26 -0400</pubDate>
+      
+      <guid>/topics/ubuntu/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
