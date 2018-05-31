@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.40.3" />
+
+  <title>c2d4u Update: Adding New Bioconductor Release &middot; R Ubuntu Blog</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">R Ubuntu</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/marutterstat" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/marutterstat" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/marutter" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2018. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>c2d4u Update: Adding New Bioconductor Release</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>31 May 2018, 15:12</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/c2d4u">c2d4u</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/ubuntu">Ubuntu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/bioconductor">Bioconductor</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>When R 3.5 was released, the good folks at the <a href="http://bioconductor.org/">Bioconductor</a> project also released a new version, 3.7. Since I was rebuilding for R 3.5, I didn’t immediately include the updates to Bioconductor in my builds. I have now taken the time to include the update, so there are an additional 83 updated/new packages on c2d4u. (<a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u">3.4</a> or <a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5">3.5</a> versions)</p>
+<p>My PPAs do not provide all the Bioconductor packages. Some are included in a <a href="https://cran.r-project.org/web/views/">CRAN Task View</a>, therefore they are included in c2d4u. Others are included in Ubuntu Universe, and with the move to R 3.5, I have made an attempt to rebuild those for compatibility.</p>
+<p>Some of the packages (<code>BiocInstaller</code> for example) require R 3.5. Obviously, these do not build against R 3.4, but older versions of the packages are available on the PPAs. If you want to use Bioconductor 3.7, I highly suggest upgrading to R 3.5.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">package</th>
+<th align="left">version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">quantreg</td>
+<td align="left">5.36</td>
+</tr>
+<tr class="even">
+<td align="left">data.table</td>
+<td align="left">1.11.4</td>
+</tr>
+<tr class="odd">
+<td align="left">purrr</td>
+<td align="left">0.2.5</td>
+</tr>
+<tr class="even">
+<td align="left">bit</td>
+<td align="left">1.1-14</td>
+</tr>
+<tr class="odd">
+<td align="left">BiocGenerics</td>
+<td align="left">0.26.0</td>
+</tr>
+<tr class="even">
+<td align="left">graph</td>
+<td align="left">1.58.0</td>
+</tr>
+<tr class="odd">
+<td align="left">RBGL</td>
+<td align="left">1.56.0</td>
+</tr>
+<tr class="even">
+<td align="left">rJava</td>
+<td align="left">0.9-10</td>
+</tr>
+<tr class="odd">
+<td align="left">plotrix</td>
+<td align="left">3.7-2</td>
+</tr>
+<tr class="even">
+<td align="left">sbgcop</td>
+<td align="left">0.980</td>
+</tr>
+<tr class="odd">
+<td align="left">energy</td>
+<td align="left">1.7-4</td>
+</tr>
+<tr class="even">
+<td align="left">impute</td>
+<td align="left">1.54.0</td>
+</tr>
+<tr class="odd">
+<td align="left">MassSpecWavelet</td>
+<td align="left">1.46.0</td>
+</tr>
+<tr class="even">
+<td align="left">metaLik</td>
+<td align="left">0.43.0</td>
+</tr>
+<tr class="odd">
+<td align="left">apcluster</td>
+<td align="left">1.4.7</td>
+</tr>
+<tr class="even">
+<td align="left">mritc</td>
+<td align="left">0.5-1</td>
+</tr>
+<tr class="odd">
+<td align="left">Rgraphviz</td>
+<td align="left">2.24.0</td>
+</tr>
+<tr class="even">
+<td align="left">surveillance</td>
+<td align="left">1.16.1</td>
+</tr>
+<tr class="odd">
+<td align="left">CellNOptR</td>
+<td align="left">1.26.0</td>
+</tr>
+<tr class="even">
+<td align="left">CNORode</td>
+<td align="left">1.22.0</td>
+</tr>
+<tr class="odd">
+<td align="left">MEIGOR</td>
+<td align="left">1.14.0</td>
+</tr>
+<tr class="even">
+<td align="left">limma</td>
+<td align="left">3.36.1</td>
+</tr>
+<tr class="odd">
+<td align="left">qvalue</td>
+<td align="left">2.12.0</td>
+</tr>
+<tr class="even">
+<td align="left">edgeR</td>
+<td align="left">3.22.2</td>
+</tr>
+<tr class="odd">
+<td align="left">Biobase</td>
+<td align="left">2.40.0</td>
+</tr>
+<tr class="even">
+<td align="left">ChainLadder</td>
+<td align="left">0.2.6</td>
+</tr>
+<tr class="odd">
+<td align="left">HardyWeinberg</td>
+<td align="left">1.6.1</td>
+</tr>
+<tr class="even">
+<td align="left">zlibbioc</td>
+<td align="left">1.26.0</td>
+</tr>
+<tr class="odd">
+<td align="left">snpStats</td>
+<td align="left">1.30.0</td>
+</tr>
+<tr class="even">
+<td align="left">ranger</td>
+<td align="left">0.10.0</td>
+</tr>
+<tr class="odd">
+<td align="left">RWeka</td>
+<td align="left">0.4-38</td>
+</tr>
+<tr class="even">
+<td align="left">stargazer</td>
+<td align="left">5.2.2</td>
+</tr>
+<tr class="odd">
+<td align="left">joint.Cox</td>
+<td align="left">2.15</td>
+</tr>
+<tr class="even">
+<td align="left">EBImage</td>
+<td align="left">4.22.0</td>
+</tr>
+<tr class="odd">
+<td align="left">GEOquery</td>
+<td align="left">2.48.0</td>
+</tr>
+<tr class="even">
+<td align="left">GEOmetadb</td>
+<td align="left">1.42.0</td>
+</tr>
+<tr class="odd">
+<td align="left">preprocessCore</td>
+<td align="left">1.42.0</td>
+</tr>
+<tr class="even">
+<td align="left">multtest</td>
+<td align="left">2.36.0</td>
+</tr>
+<tr class="odd">
+<td align="left">S4Vectors</td>
+<td align="left">0.18.2</td>
+</tr>
+<tr class="even">
+<td align="left">IRanges</td>
+<td align="left">2.14.10</td>
+</tr>
+<tr class="odd">
+<td align="left">AnnotationDbi</td>
+<td align="left">1.42.1</td>
+</tr>
+<tr class="even">
+<td align="left">annotate</td>
+<td align="left">1.58.0</td>
+</tr>
+<tr class="odd">
+<td align="left">genefilter</td>
+<td align="left">1.62.0</td>
+</tr>
+<tr class="even">
+<td align="left">GSEABase</td>
+<td align="left">1.42.0</td>
+</tr>
+<tr class="odd">
+<td align="left">robCompositions</td>
+<td align="left">2.0.8</td>
+</tr>
+<tr class="even">
+<td align="left">pdftools</td>
+<td align="left">1.8</td>
+</tr>
+<tr class="odd">
+<td align="left">tidytext</td>
+<td align="left">0.1.9</td>
+</tr>
+<tr class="even">
+<td align="left">CDM</td>
+<td align="left">6.3-45</td>
+</tr>
+<tr class="odd">
+<td align="left">mipfp</td>
+<td align="left">3.2</td>
+</tr>
+<tr class="even">
+<td align="left">simPop</td>
+<td align="left">1.1.1</td>
+</tr>
+<tr class="odd">
+<td align="left">hypervolume</td>
+<td align="left">2.0.9</td>
+</tr>
+<tr class="even">
+<td align="left">XVector</td>
+<td align="left">0.20.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Biostrings</td>
+<td align="left">2.48.0</td>
+</tr>
+<tr class="even">
+<td align="left">Rhdf5lib</td>
+<td align="left">1.2.1</td>
+</tr>
+<tr class="odd">
+<td align="left">rhdf5</td>
+<td align="left">2.24.0</td>
+</tr>
+<tr class="even">
+<td align="left">biomformat</td>
+<td align="left">1.8.0</td>
+</tr>
+<tr class="odd">
+<td align="left">phyloseq</td>
+<td align="left">1.24.0</td>
+</tr>
+<tr class="even">
+<td align="left">catR</td>
+<td align="left">3.14</td>
+</tr>
+<tr class="odd">
+<td align="left">rlang</td>
+<td align="left">0.2.1</td>
+</tr>
+<tr class="even">
+<td align="left">soiltexture</td>
+<td align="left">1.4.6</td>
+</tr>
+<tr class="odd">
+<td align="left">rsurface</td>
+<td align="left">1.1.0</td>
+</tr>
+<tr class="even">
+<td align="left">occ</td>
+<td align="left">1.1</td>
+</tr>
+<tr class="odd">
+<td align="left">GenomeInfoDbData</td>
+<td align="left">1.1.0</td>
+</tr>
+<tr class="even">
+<td align="left">GenomeInfoDb</td>
+<td align="left">1.16.0</td>
+</tr>
+<tr class="odd">
+<td align="left">illuminaio</td>
+<td align="left">0.22.0</td>
+</tr>
+<tr class="even">
+<td align="left">GenomicRanges</td>
+<td align="left">1.32.3</td>
+</tr>
+<tr class="odd">
+<td align="left">BeadDataPackR</td>
+<td align="left">1.32.0</td>
+</tr>
+<tr class="even">
+<td align="left">BiocInstaller</td>
+<td align="left">1.30.0</td>
+</tr>
+<tr class="odd">
+<td align="left">affyio</td>
+<td align="left">1.50.0</td>
+</tr>
+<tr class="even">
+<td align="left">beadarray</td>
+<td align="left">2.30.0</td>
+</tr>
+<tr class="odd">
+<td align="left">affy</td>
+<td align="left">1.58.0</td>
+</tr>
+<tr class="even">
+<td align="left">Icens</td>
+<td align="left">1.52.0</td>
+</tr>
+<tr class="odd">
+<td align="left">joineRML</td>
+<td align="left">0.4.2</td>
+</tr>
+<tr class="even">
+<td align="left">rstpm2</td>
+<td align="left">1.4.2</td>
+</tr>
+<tr class="odd">
+<td align="left">SemiMarkov</td>
+<td align="left">1.4.4</td>
+</tr>
+<tr class="even">
+<td align="left">survcomp</td>
+<td align="left">1.30.0</td>
+</tr>
+<tr class="odd">
+<td align="left">ramcmc</td>
+<td align="left">0.1.0-1</td>
+</tr>
+<tr class="even">
+<td align="left">bestglm</td>
+<td align="left">0.37</td>
+</tr>
+<tr class="odd">
+<td align="left">splusTimeSeries</td>
+<td align="left">1.5.0-75</td>
+</tr>
+<tr class="even">
+<td align="left">tsibble</td>
+<td align="left">0.3.0</td>
+</tr>
+<tr class="odd">
+<td align="left">abbyyR</td>
+<td align="left">0.5.4</td>
+</tr>
+<tr class="even">
+<td align="left">rdatacite</td>
+<td align="left">0.4.0</td>
+</tr>
+<tr class="odd">
+<td align="left">servr</td>
+<td align="left">0.10</td>
+</tr>
+</tbody>
+</table>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2018-05-27-c2d4u-update-230-new-and-updated-pacakges/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2018-05-27-c2d4u-update-230-new-and-updated-pacakges/">c2d4u Update: 230 New and Updated Pacakges</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking ID', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+

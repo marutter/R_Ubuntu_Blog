@@ -1,0 +1,25 @@
+---
+title: "c2d4u Update: Adding New Bioconductor Release"
+date: "2018-05-31T15:12:00-05:00"
+draft: false
+tags: [R,c2d4u,Ubuntu,Bioconductor]
+categories: [R,c2d4u,Ubuntu,Bioconductor]
+description: ""
+---
+
+When R 3.5 was released, the good folks at the [Bioconductor](http://bioconductor.org/) project also released a new version, 3.7.  Since I was rebuilding for R 3.5, I didn't immediately include the updates to Bioconductor in my builds.  I have now taken the time to include the update, so there are an additional 83 updated/new packages on c2d4u. ([3.4](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u) or [3.5](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5) versions)
+
+My PPAs do not provide all the Bioconductor packages.  Some are included in a [CRAN Task View](https://cran.r-project.org/web/views/), therefore they are included in c2d4u.  Others are included in Ubuntu Universe, and with the move to R 3.5, I have made an attempt to rebuild those for compatibility.
+
+Some of the packages (`BiocInstaller` for example) require R 3.5.  Obviously, these do not build against R 3.4, but older versions of the packages are available on the PPAs.  If you want to use Bioconductor 3.7, I highly suggest upgrading to R 3.5.
+
+
+
+```{r echo=FALSE}
+library(XML)
+library(knitr)
+url <- "http://192.168.1.129/cran2deb/todays_packages.html"
+new.pkgs <- readHTMLTable(url)[[2]]
+kable(new.pkgs[,4:5])
+```
+
