@@ -1,6 +1,6 @@
 ---
 title: "c2d4u Update: Adding New Bioconductor Release"
-date: "2018-05-31T15:12:00-05:00"
+date: 2018-05-31T15:12:00-05:00
 draft: false
 tags: [R,c2d4u,Ubuntu,Bioconductor]
 categories: [R,c2d4u,Ubuntu,Bioconductor]
