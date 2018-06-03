@@ -7,7 +7,7 @@ categories: [R,c2d4u,Ubuntu]
 description: ""
 ---
 
-Small weekly update to c2d4u.  21 packages in total. 
+Small weekly update to c2d4u.  21 packages in total.
 
 PPA for pacakges built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
 
