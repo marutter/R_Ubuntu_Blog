@@ -7,10 +7,117 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 31 May 2018 15:12:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jun 2018 11:05:00 -0500</lastBuildDate>
     
         <atom:link href="/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>June 2nd, 2018 c2d4u Update: 21 updated/new packages</title>
+      <link>/post/2018-06-04-june-2-18-c2d4u-update/</link>
+      <pubDate>Sun, 03 Jun 2018 11:05:00 -0500</pubDate>
+      
+      <guid>/post/2018-06-04-june-2-18-c2d4u-update/</guid>
+      <description>&lt;p&gt;Small weekly update to c2d4u. 21 packages in total.&lt;/p&gt;
+&lt;p&gt;PPA for pacakges built against R 3.4.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u&#34;&gt;c2d4u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PPA for pacakges built against R 3.5.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;c2d4u3.5&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 21&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;package&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;r_version&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;OBsMD&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;RobAStBase&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1.0.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SpatialEpi&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1.2.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;TSrepr&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1.0.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;clusterSEs&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;fso&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.1-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;logspline&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.1.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;metaforest&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.1.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mixsmsn&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1.1-5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;mvtnorm&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1.0-8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;packrat&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.4.9-3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;phylolm&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;plotmo&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3.4.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;prophet&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;rbcb&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.1.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;rgeos&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.3-27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;seacarb&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3.2.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;seas&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.5-2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;skpr&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0.49.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;splusTimeDate&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.5.0-141&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;storr&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1.2.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>c2d4u Update: Adding New Bioconductor Release</title>
