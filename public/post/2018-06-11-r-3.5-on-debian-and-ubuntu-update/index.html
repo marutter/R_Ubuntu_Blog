@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.40.3" />
+
+  <title>June 11th, 2018 R 3.5.0 on Debian and Ubuntu: An Update &middot; R Ubuntu Blog</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">R Ubuntu</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/marutterstat" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/marutterstat" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/marutter" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2018. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>June 11th, 2018 R 3.5.0 on Debian and Ubuntu: An Update</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jun 2018, 11:20</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/3.5">3.5</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/ubuntu">Ubuntu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/debian">Debian</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <div id="overview" class="section level1">
+<h1>Overview</h1>
+<p>R 3.5.0 was <a href="https://stat.ethz.ch/pipermail/r-announce/2018/000628.html">released</a> a few weeks ago. As it changes some (important) internals, packages installed with a previous version of R have to be rebuilt. This was known and expected, and we took several measured steps to get R binaries to everybody without breakage.</p>
+<p>The question of <em>but how do I upgrade without breaking my system</em> was asked a few times, <em>e.g.</em>, on the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-debian">r-sig-debian list</a> as well as in <a href="https://stackoverflow.com/a/50076739/143305">this StackOverflow question</a>.</p>
+</div>
+<div id="debian" class="section level1">
+<h1>Debian</h1>
+<p><strong>Core Distribution</strong> As usual, we packaged R 3.5.0 as soon as it was released – but only for the <code>experimental</code> distribution, awaiting a green light from the release masters to start the transition. A one-off repository <code>[drr35](https://github.com/eddelbuettel/drr35)</code> was created to provide R 3.5.0 binaries more immediately; this was used, <em>e.g.</em>, by the <code>r-base</code> <a href="https://www.rocker-project.org/">Rocker Project</a> container / the <a href="https://hub.docker.com/_/r-base/">official R Docker container</a> which we also update after each release.</p>
+<p>The actual transition was started last Friday, June 1, and concluded this Friday, June 8. Well over 600 packages have been rebuilt under R 3.5.0, and are now ready in the <code>unstable</code> distribution from which they should migrate to <code>testing</code> soon. The <code>Rocker</code> container <code>r-base</code> was also updated.</p>
+<p>So if you use Debian unstable or testing, these are ready now (or will be soon once migrated to <code>testing</code>). This should include most <code>Rocker</code> containers built from Debian images.</p>
+<p><strong>Contributed CRAN Binaries</strong> Johannes also provided backports with a -<code>cran35</code> suffix in his CRAN-mirrored Debian backport repositories, see the <a href="https://cloud.r-project.org/bin/linux/debian/">README</a>.</p>
+</div>
+<div id="ubuntu" class="section level1">
+<h1>Ubuntu</h1>
+<p><strong>Core (Upcoming) Distribution</strong> Ubuntu, for the upcoming 18.10, has undertaken a similar transition. Few users access this release yet, so the next section may be more important.</p>
+<p><strong>Contributed CRAN and PPA Binaries</strong> Two new Launchpad PPA repositories were created as well. Given the rather large scope of thousands of packages, multiplied by several Ubuntu releases, this too took a moment but is now fully usable and should get mirrored to CRAN ‘soon’. It covers the most recent and still supported LTS releases as well as the current release 18.04.</p>
+<p>One PPA contains base R and the recommended packages, <a href="https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5">RRutter3.5</a>. This is source of the packages that will soon be available on CRAN. The second PPA (<a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5">c2d4u3.5</a>) contains over 3,500 packages mainly derived from <a href="https://cran.r-project.org/web/views/">CRAN Task Views</a>. Details on updates can be found at Michael’s <a href="http://rubuntu.netlify.com/">R Ubuntu Blog</a>.</p>
+<p>This can used for, <em>e.g.</em>, Travis if you managed your own sources as Dirk’s <code>r-travis</code> does. We expect to use this relatively soon, possibly as an opt-in via a variable upon which <code>run.sh</code> selects the appropriate repository set. It will also be used for <code>Rocker</code> releases built based off Ubuntu.</p>
+<p>In both cases, you may need to adjust the <code>sources</code> list for <code>apt</code> accordingly.</p>
+</div>
+<div id="others" class="section level1">
+<h1>Others</h1>
+<p>There may also be ongoing efforts within Arch and other Debian-derived distributions, but we are not really aware of what is happening there. If you use those, and coordination is needed, please feel free to reach out via the the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-debian">r-sig-debian list</a>.</p>
+</div>
+<div id="closing" class="section level1">
+<h1>Closing</h1>
+<p>In case of questions or concerns, please consider posting to the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-debian">r-sig-debian list</a>.</p>
+<p>Dirk, Michael and Johannes, June 2018</p>
+</div>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/2018-06-10-june-9-18-c2d4u-update/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/2018-06-10-june-9-18-c2d4u-update/">June 9th, 2018 c2d4u Update: 81 updated/new packages</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking ID', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+

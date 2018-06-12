@@ -1,0 +1,40 @@
+---
+title: "June 11th, 2018 R 3.5.0 on Debian and Ubuntu: An Update"
+date: 2018-06-10T11:20:33-05:00
+draft: false
+tags: [R,3.5,Ubuntu,Debian]
+categories: [R,3.5,Ubuntu,Debian]
+description: ""
+---
+
+
+
+<div id="overview" class="section level1">
+<h1>Overview</h1>
+<p>R 3.5.0 was <a href="https://stat.ethz.ch/pipermail/r-announce/2018/000628.html">released</a> a few weeks ago. As it changes some (important) internals, packages installed with a previous version of R have to be rebuilt. This was known and expected, and we took several measured steps to get R binaries to everybody without breakage.</p>
+<p>The question of <em>but how do I upgrade without breaking my system</em> was asked a few times, <em>e.g.</em>, on the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-debian">r-sig-debian list</a> as well as in <a href="https://stackoverflow.com/a/50076739/143305">this StackOverflow question</a>.</p>
+</div>
+<div id="debian" class="section level1">
+<h1>Debian</h1>
+<p><strong>Core Distribution</strong> As usual, we packaged R 3.5.0 as soon as it was released – but only for the <code>experimental</code> distribution, awaiting a green light from the release masters to start the transition. A one-off repository <code>[drr35](https://github.com/eddelbuettel/drr35)</code> was created to provide R 3.5.0 binaries more immediately; this was used, <em>e.g.</em>, by the <code>r-base</code> <a href="https://www.rocker-project.org/">Rocker Project</a> container / the <a href="https://hub.docker.com/_/r-base/">official R Docker container</a> which we also update after each release.</p>
+<p>The actual transition was started last Friday, June 1, and concluded this Friday, June 8. Well over 600 packages have been rebuilt under R 3.5.0, and are now ready in the <code>unstable</code> distribution from which they should migrate to <code>testing</code> soon. The <code>Rocker</code> container <code>r-base</code> was also updated.</p>
+<p>So if you use Debian unstable or testing, these are ready now (or will be soon once migrated to <code>testing</code>). This should include most <code>Rocker</code> containers built from Debian images.</p>
+<p><strong>Contributed CRAN Binaries</strong> Johannes also provided backports with a -<code>cran35</code> suffix in his CRAN-mirrored Debian backport repositories, see the <a href="https://cloud.r-project.org/bin/linux/debian/">README</a>.</p>
+</div>
+<div id="ubuntu" class="section level1">
+<h1>Ubuntu</h1>
+<p><strong>Core (Upcoming) Distribution</strong> Ubuntu, for the upcoming 18.10, has undertaken a similar transition. Few users access this release yet, so the next section may be more important.</p>
+<p><strong>Contributed CRAN and PPA Binaries</strong> Two new Launchpad PPA repositories were created as well. Given the rather large scope of thousands of packages, multiplied by several Ubuntu releases, this too took a moment but is now fully usable and should get mirrored to CRAN ‘soon’. It covers the most recent and still supported LTS releases as well as the current release 18.04.</p>
+<p>One PPA contains base R and the recommended packages, <a href="https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5">RRutter3.5</a>. This is source of the packages that will soon be available on CRAN. The second PPA (<a href="https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5">c2d4u3.5</a>) contains over 3,500 packages mainly derived from <a href="https://cran.r-project.org/web/views/">CRAN Task Views</a>. Details on updates can be found at Michael’s <a href="http://rubuntu.netlify.com/">R Ubuntu Blog</a>.</p>
+<p>This can used for, <em>e.g.</em>, Travis if you managed your own sources as Dirk’s <code>r-travis</code> does. We expect to use this relatively soon, possibly as an opt-in via a variable upon which <code>run.sh</code> selects the appropriate repository set. It will also be used for <code>Rocker</code> releases built based off Ubuntu.</p>
+<p>In both cases, you may need to adjust the <code>sources</code> list for <code>apt</code> accordingly.</p>
+</div>
+<div id="others" class="section level1">
+<h1>Others</h1>
+<p>There may also be ongoing efforts within Arch and other Debian-derived distributions, but we are not really aware of what is happening there. If you use those, and coordination is needed, please feel free to reach out via the the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-debian">r-sig-debian list</a>.</p>
+</div>
+<div id="closing" class="section level1">
+<h1>Closing</h1>
+<p>In case of questions or concerns, please consider posting to the <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-debian">r-sig-debian list</a>.</p>
+<p>Dirk, Michael and Johannes, June 2018</p>
+</div>

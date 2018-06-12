@@ -13,6 +13,44 @@
     
     
     <item>
+      <title>June 11th, 2018 R 3.5.0 on Debian and Ubuntu: An Update</title>
+      <link>/post/2018-06-11-r-3.5-on-debian-and-ubuntu-update/</link>
+      <pubDate>Sun, 10 Jun 2018 11:20:33 -0500</pubDate>
+      
+      <guid>/post/2018-06-11-r-3.5-on-debian-and-ubuntu-update/</guid>
+      <description>&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;R 3.5.0 was &lt;a href=&#34;https://stat.ethz.ch/pipermail/r-announce/2018/000628.html&#34;&gt;released&lt;/a&gt; a few weeks ago. As it changes some (important) internals, packages installed with a previous version of R have to be rebuilt. This was known and expected, and we took several measured steps to get R binaries to everybody without breakage.&lt;/p&gt;
+&lt;p&gt;The question of &lt;em&gt;but how do I upgrade without breaking my system&lt;/em&gt; was asked a few times, &lt;em&gt;e.g.&lt;/em&gt;, on the &lt;a href=&#34;https://stat.ethz.ch/mailman/listinfo/r-sig-debian&#34;&gt;r-sig-debian list&lt;/a&gt; as well as in &lt;a href=&#34;https://stackoverflow.com/a/50076739/143305&#34;&gt;this StackOverflow question&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;debian&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Debian&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Core Distribution&lt;/strong&gt; As usual, we packaged R 3.5.0 as soon as it was released – but only for the &lt;code&gt;experimental&lt;/code&gt; distribution, awaiting a green light from the release masters to start the transition. A one-off repository &lt;code&gt;[drr35](https://github.com/eddelbuettel/drr35)&lt;/code&gt; was created to provide R 3.5.0 binaries more immediately; this was used, &lt;em&gt;e.g.&lt;/em&gt;, by the &lt;code&gt;r-base&lt;/code&gt; &lt;a href=&#34;https://www.rocker-project.org/&#34;&gt;Rocker Project&lt;/a&gt; container / the &lt;a href=&#34;https://hub.docker.com/_/r-base/&#34;&gt;official R Docker container&lt;/a&gt; which we also update after each release.&lt;/p&gt;
+&lt;p&gt;The actual transition was started last Friday, June 1, and concluded this Friday, June 8. Well over 600 packages have been rebuilt under R 3.5.0, and are now ready in the &lt;code&gt;unstable&lt;/code&gt; distribution from which they should migrate to &lt;code&gt;testing&lt;/code&gt; soon. The &lt;code&gt;Rocker&lt;/code&gt; container &lt;code&gt;r-base&lt;/code&gt; was also updated.&lt;/p&gt;
+&lt;p&gt;So if you use Debian unstable or testing, these are ready now (or will be soon once migrated to &lt;code&gt;testing&lt;/code&gt;). This should include most &lt;code&gt;Rocker&lt;/code&gt; containers built from Debian images.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Contributed CRAN Binaries&lt;/strong&gt; Johannes also provided backports with a -&lt;code&gt;cran35&lt;/code&gt; suffix in his CRAN-mirrored Debian backport repositories, see the &lt;a href=&#34;https://cloud.r-project.org/bin/linux/debian/&#34;&gt;README&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ubuntu&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Ubuntu&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Core (Upcoming) Distribution&lt;/strong&gt; Ubuntu, for the upcoming 18.10, has undertaken a similar transition. Few users access this release yet, so the next section may be more important.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Contributed CRAN and PPA Binaries&lt;/strong&gt; Two new Launchpad PPA repositories were created as well. Given the rather large scope of thousands of packages, multiplied by several Ubuntu releases, this too took a moment but is now fully usable and should get mirrored to CRAN ‘soon’. It covers the most recent and still supported LTS releases as well as the current release 18.04.&lt;/p&gt;
+&lt;p&gt;One PPA contains base R and the recommended packages, &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5&#34;&gt;RRutter3.5&lt;/a&gt;. This is source of the packages that will soon be available on CRAN. The second PPA (&lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;c2d4u3.5&lt;/a&gt;) contains over 3,500 packages mainly derived from &lt;a href=&#34;https://cran.r-project.org/web/views/&#34;&gt;CRAN Task Views&lt;/a&gt;. Details on updates can be found at Michael’s &lt;a href=&#34;http://rubuntu.netlify.com/&#34;&gt;R Ubuntu Blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This can used for, &lt;em&gt;e.g.&lt;/em&gt;, Travis if you managed your own sources as Dirk’s &lt;code&gt;r-travis&lt;/code&gt; does. We expect to use this relatively soon, possibly as an opt-in via a variable upon which &lt;code&gt;run.sh&lt;/code&gt; selects the appropriate repository set. It will also be used for &lt;code&gt;Rocker&lt;/code&gt; releases built based off Ubuntu.&lt;/p&gt;
+&lt;p&gt;In both cases, you may need to adjust the &lt;code&gt;sources&lt;/code&gt; list for &lt;code&gt;apt&lt;/code&gt; accordingly.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;others&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Others&lt;/h1&gt;
+&lt;p&gt;There may also be ongoing efforts within Arch and other Debian-derived distributions, but we are not really aware of what is happening there. If you use those, and coordination is needed, please feel free to reach out via the the &lt;a href=&#34;https://stat.ethz.ch/mailman/listinfo/r-sig-debian&#34;&gt;r-sig-debian list&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;closing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Closing&lt;/h1&gt;
+&lt;p&gt;In case of questions or concerns, please consider posting to the &lt;a href=&#34;https://stat.ethz.ch/mailman/listinfo/r-sig-debian&#34;&gt;r-sig-debian list&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dirk, Michael and Johannes, June 2018&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>June 9th, 2018 c2d4u Update: 81 updated/new packages</title>
       <link>/post/2018-06-10-june-9-18-c2d4u-update/</link>
       <pubDate>Sun, 10 Jun 2018 11:20:33 -0500</pubDate>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 26 May 2018 14:48:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jun 2018 11:20:33 -0500</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>3.5</title>
       <link>/tags/3.5/</link>
-      <pubDate>Sat, 26 May 2018 14:48:00 -0500</pubDate>
+      <pubDate>Sun, 10 Jun 2018 11:20:33 -0500</pubDate>
       
       <guid>/tags/3.5/</guid>
       <description></description>
@@ -36,6 +36,15 @@
       <pubDate>Sun, 10 Jun 2018 11:20:33 -0500</pubDate>
       
       <guid>/tags/c2d4u/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>/tags/debian/</link>
+      <pubDate>Sun, 10 Jun 2018 11:20:33 -0500</pubDate>
+      
+      <guid>/tags/debian/</guid>
       <description></description>
     </item>
     
