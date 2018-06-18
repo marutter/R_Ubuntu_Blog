@@ -1,0 +1,27 @@
+---
+title: "June 17th, 2018 c2d4u update"
+date: 2018-06-18T08:00:00-05:00
+draft: false
+tags: [R,c2d4u,Ubuntu]
+categories: [R,c2d4u,Ubuntu]
+description: ""
+---
+
+Weekly c2d4u update.  101 packages either updated or new.  The transition to R 3.5 is starting to be seen on CRAN, as some packages are now requiring the latest version.  Of the packages listed below, `piecewisesem` and `dae` are not available on c2d4u, which is based on R 3.4.  At some point, updates to that version of c2d4u will stop if too many pacakges are R 3.5 dependent.
+
+PPA for pacakges built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
+
+PPA for pacakges built against R 3.5.*: [c2d4u3.5](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5)
+
+
+```{r echo=FALSE, message=FALSE}
+library(XML)
+library(knitr)
+url <- "http://192.168.1.129/cran2deb/latest_packages.html"
+all.pkgs <- readHTMLTable(url)[[2]]
+build.date <- as.Date("2018-06-15")
+all.pkgs <- data.frame(lapply(all.pkgs, as.character), stringsAsFactors=FALSE)
+#sum(as.Date(all.pkgs$date_stamp)>build.date)
+new.pkgs <- all.pkgs[as.Date(all.pkgs$date_stamp)>build.date,]
+kable(new.pkgs[,2:3],row.names = FALSE)
+```
