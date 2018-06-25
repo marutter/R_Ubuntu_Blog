@@ -9,9 +9,9 @@ description: ""
 
 Weekly c2d4u update.  66 packages either updated or new.  One more package, `lfe`, requiring R 3.5, therefore not available on c2d4u for R 3.4.
 
-PPA for pacakges built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
+PPA for packages built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
 
-PPA for pacakges built against R 3.5.*: [c2d4u3.5](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5)
+PPA for packages built against R 3.5.*: [c2d4u3.5](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5)
 
 
 ```{r echo=FALSE, message=FALSE}

@@ -19,8 +19,8 @@
       
       <guid>/post/2018-06-24-june-24-c2d4u-update/</guid>
       <description>&lt;p&gt;Weekly c2d4u update. 66 packages either updated or new. One more package, &lt;code&gt;lfe&lt;/code&gt;, requiring R 3.5, therefore not available on c2d4u for R 3.4.&lt;/p&gt;
-&lt;p&gt;PPA for pacakges built against R 3.4.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u&#34;&gt;c2d4u&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PPA for pacakges built against R 3.5.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;c2d4u3.5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PPA for packages built against R 3.4.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u&#34;&gt;c2d4u&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PPA for packages built against R 3.5.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;c2d4u3.5&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
