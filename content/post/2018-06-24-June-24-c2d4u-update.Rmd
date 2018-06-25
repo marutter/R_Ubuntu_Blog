@@ -7,7 +7,7 @@ categories: [R,c2d4u,Ubuntu]
 description: ""
 ---
 
-Weekly c2d4u update.  66 packages either updated or new.  One more package, `lfe`, requiring R 3.5, therefore not available on c2d4u for R 3.4.
+Weekly c2d4u update.  66 packages either updated or new.  One more package, `lfe`, requiring R 3.5, therefore not available on c2d4u for R 3.4.  Don't forget to install an additional PPA in order to support the spatial packages: [ubuntugis-stable](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa).
 
 PPA for packages built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
 
