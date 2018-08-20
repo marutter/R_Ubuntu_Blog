@@ -3,6 +3,7 @@ title: c2d4u August 18th Update
 author: Michael Rutter
 date: '2018-08-19T22:55:00-05:00'
 slug: c2d4u-august-18th-update
+draft: false
 categories:
   - c2d4u
   - R
