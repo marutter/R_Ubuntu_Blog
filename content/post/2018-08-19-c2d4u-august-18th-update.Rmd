@@ -1,0 +1,36 @@
+---
+title: c2d4u August 18th Update
+author: Michael Rutter
+date: '2018-08-19T22:55:00-05:00'
+slug: c2d4u-august-18th-update
+categories:
+  - c2d4u
+  - R
+  - Ubuntu
+tags:
+  - c2d4u
+  - R
+  - Ubuntu
+description: ''
+topics: []
+---
+
+On c2d4u, 58 packages were updated or added on August 18th.  The list is below.  As with many recent updates, a couple of packages require R 3.5.  These packages are not being updated on the 3.4 c2d4u.  I also updated `ess` on CRAN to the most recent version.
+
+
+PPA for packages built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
+
+PPA for packages built against R 3.5.*: [c2d4u3.5](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5)
+
+
+```{r echo=FALSE, message=FALSE}
+library(XML)
+library(knitr)
+url <- "http://192.168.1.129/cran2deb/latest_packages.html"
+all.pkgs <- readHTMLTable(url)[[2]]
+build.date <- as.Date("2018-08-17")
+all.pkgs <- data.frame(lapply(all.pkgs, as.character), stringsAsFactors=FALSE)
+#sum(as.Date(all.pkgs$date_stamp)>build.date)
+new.pkgs <- all.pkgs[as.Date(all.pkgs$date_stamp)>build.date,]
+kable(new.pkgs[,2:3],row.names = FALSE)
+```
