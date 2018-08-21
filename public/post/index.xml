@@ -18,7 +18,7 @@
       <pubDate>Sun, 19 Aug 2018 22:55:00 -0500</pubDate>
       
       <guid>/post/c2d4u-august-18th-update/</guid>
-      <description>&lt;p&gt;On c2d4u, 58 packages were updated or added on August 18th. The list is below. As with many recent updates, a couple of packages require R 3.5. These packages are not being updated on the 3.4 c2d4u. I also updated &lt;code&gt;ess&lt;/code&gt; on CRAN to the most recent version.&lt;/p&gt;
+      <description>&lt;p&gt;On c2d4u, 58 packages were updated or added on August 18th. The list is below. As with many recent updates, a couple of packages require R 3.5. These packages are not being updated on the 3.4 c2d4u. I also updated &lt;code&gt;ess&lt;/code&gt; on CRAN to the most recent version, which does not install. Dirk Eddelbuettel is uploading a new version that will hopefully fix things.&lt;/p&gt;
 &lt;p&gt;PPA for packages built against R 3.4.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u&#34;&gt;c2d4u&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PPA for packages built against R 3.5.*: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;c2d4u3.5&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
