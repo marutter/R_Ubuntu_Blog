@@ -1,0 +1,38 @@
+---
+title: August 25th c2d4u Update
+author: Michael Rutter
+date: '2018-08-29'
+slug: august-25th-c2d4u-update
+draft: false
+categories:
+  - c2d4u
+  - R
+  - Ubuntu
+tags:
+  - c2d4u
+  - R
+  - Ubuntu
+description: ''
+topics: []
+---
+
+64 new or updated packages on c2d4u were uploaded on August 25th.  Packages are listed below.
+
+Currently on the version 3.5 c2d4u PPA, there are 4059 packages for Bionic, 3674 for Xenial, and 3673 for Trusty.  As always, if something fails to install or does not play well with other packages, please let me know.
+
+PPA for packages built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
+
+PPA for packages built against R 3.5.*: [c2d4u3.5](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5)
+
+
+```{r echo=FALSE, message=FALSE}
+library(XML)
+library(knitr)
+url <- "http://192.168.1.129/cran2deb/latest_packages.html"
+all.pkgs <- readHTMLTable(url)[[2]]
+build.date <- as.Date("2018-08-24")
+all.pkgs <- data.frame(lapply(all.pkgs, as.character), stringsAsFactors=FALSE)
+#sum(as.Date(all.pkgs$date_stamp)>build.date)
+new.pkgs <- all.pkgs[as.Date(all.pkgs$date_stamp)>build.date,]
+kable(new.pkgs[,2:3],row.names = FALSE)
+```
