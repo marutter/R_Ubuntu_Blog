@@ -292,6 +292,22 @@
     </item>
     
     <item>
+      <title>Changes to CRAN Ubuntu webpage regarding apt-secure key</title>
+      <link>/post/changes-to-cran-ubuntu-webpage-regarding-apt-secure-key/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/changes-to-cran-ubuntu-webpage-regarding-apt-secure-key/</guid>
+      <description>&lt;p&gt;Thanks to a couple of users of the &lt;a href=&#34;https://cran.r-project.org/bin/linux/ubuntu/&#34;&gt;Ubuntu&lt;/a&gt; page on the CRAN, I was recently alerted to a duplicate key on the keyserver.ubuntu.com website. If you &lt;a href=&#34;http://keyserver.ubuntu.com/pks/lookup?search=0xE084DAB9&amp;amp;op=vindex&#34;&gt;search&lt;/a&gt; for my key using the short ID string, you will find two keys listed.&lt;/p&gt;
+&lt;p&gt;One of the keys is mine, uid “Michael Rutter”. The other key, even though the date suggests otherwise, appears to be new. The uid is “Totally Legit Signing Key”. I am fairly certain that this key was placed there to demonstrate that using the short key ID is flawed, as it is easy to create a key using brute force that matches my key. This is called an key id collision. If you do a google search, you can find a similar key on another Ubuntu related project. I don’t think there was any malicious intent, but I think it is something to be aware of.&lt;/p&gt;
+&lt;p&gt;If you recently added my key using the methods describe on CRAN, it may have downloaded two keys. You can check this by running &lt;code&gt;gpg --list-keys&lt;/code&gt;. If the other key has been added to your machine, you should see “Totally Legit Signing Key” listed as rsa1024 with a long id of CF805866AEBD82665423554F4359ED62E084DAB9.&lt;/p&gt;
+&lt;p&gt;You can delete this key by running &lt;code&gt;gpg -delete-key &amp;quot;Totally Legit Signing Key&amp;quot;&lt;/code&gt;. &lt;code&gt;sudo&lt;/code&gt; may be needed, depending on your individual setup.&lt;/p&gt;
+&lt;p&gt;To prevent this from happening in the future, I have changed the directions on CRAN to install my public key using a longer key id. This will only download my key.&lt;/p&gt;
+&lt;p&gt;There is no reason to believe that any of the packages on CRAN have been compromised using this key. Comprimised pacakges signed with this bogus key would have to have been placed on my server located behind a firewall at a large research university. I think this is highly unlikely, as only files on that server are synced to CRAN.&lt;/p&gt;
+&lt;p&gt;If you have any questions or concerns, please contact me.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>c2d4u August 18th Update</title>
       <link>/post/c2d4u-august-18th-update/</link>
       <pubDate>Sun, 19 Aug 2018 22:55:00 -0500</pubDate>

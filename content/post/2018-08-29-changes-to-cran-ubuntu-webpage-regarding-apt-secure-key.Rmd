@@ -1,0 +1,29 @@
+---
+title: Changes to CRAN Ubuntu webpage regarding apt-secure key
+author: Michael Rutter
+date: '2018-08-29'
+slug: changes-to-cran-ubuntu-webpage-regarding-apt-secure-key
+draft: false
+categories:
+  - R
+  - Ubuntu
+tags:
+  - R
+  - Ubuntu
+description: ''
+topics: []
+---
+
+Thanks to a couple of users of the [Ubuntu](https://cran.r-project.org/bin/linux/ubuntu/) page on the CRAN, I was recently alerted to a duplicate key on the keyserver.ubuntu.com website.  If you [search](http://keyserver.ubuntu.com/pks/lookup?search=0xE084DAB9&op=vindex) for my key using the short ID string, you will find two keys listed.
+
+One of the keys is mine, uid "Michael Rutter".  The other key, even though the date suggests otherwise, appears to be new.  The uid is "Totally Legit Signing Key".  I am fairly certain that this key was placed there to demonstrate that using the short key ID is flawed, as it is easy to create a key using brute force that matches my key.  This is called an key id collision.  If you do a google search, you can find a similar key on another Ubuntu related project.  I don't think there was any malicious intent, but I think it is something to be aware of.
+
+If you recently added my key using the methods describe on CRAN, it may have downloaded two keys.  You can check this by running `gpg --list-keys`.  If the other key has been added to your machine, you should see "Totally Legit Signing Key" listed as rsa1024 with a long id of CF805866AEBD82665423554F4359ED62E084DAB9.    
+
+You can delete this key by running `gpg -delete-key "Totally Legit Signing Key"`.  `sudo` may be needed, depending on your individual setup.
+
+To prevent this from happening in the future, I have changed the directions on CRAN to install my public key using a longer key id.  This will only download my key.
+
+There is no reason to believe that any of the packages on CRAN have been compromised using this key.  Comprimised pacakges signed with this bogus key would have to have been placed on my server located behind a firewall at a large research university.  I think this is highly unlikely, as only files on that server are synced to CRAN.
+
+If you have any questions or concerns, please contact me.

@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.46" />
 
-  <title>Posts &middot; R Ubuntu Blog</title>
+  <title>Changes to CRAN Ubuntu webpage regarding apt-secure key &middot; R Ubuntu Blog</title>
 
   
   
@@ -39,8 +39,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="R Ubuntu Blog" href="/post/index.xml" />
   
 
   
@@ -105,10 +103,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="/post/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -216,57 +210,85 @@
 
 
 <div class="header">
-  <h1>Posts</h1>
+  <h1>Changes to CRAN Ubuntu webpage regarding apt-secure key</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  
-  <h2>2018</h2>
-  <ul>
-  
-    <li><time>29 Aug 2018, 00:00</time> - <a href="/post/changes-to-cran-ubuntu-webpage-regarding-apt-secure-key/">Changes to CRAN Ubuntu webpage regarding apt-secure key</a></li>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Aug 2018, 00:00</time>
+  </div>
 
   
-    <li><time>29 Aug 2018, 00:00</time> - <a href="/post/august-25th-c2d4u-update/">August 25th c2d4u Update</a></li>
 
   
-    <li><time>19 Aug 2018, 22:55</time> - <a href="/post/c2d4u-august-18th-update/">c2d4u August 18th Update</a></li>
+  
+  
+  
 
   
-    <li><time>24 Jun 2018, 22:00</time> - <a href="/post/2018-06-24-june-24-c2d4u-update/">June 24th, 2018 c2d4u update</a></li>
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="/tags/ubuntu">Ubuntu</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>Thanks to a couple of users of the <a href="https://cran.r-project.org/bin/linux/ubuntu/">Ubuntu</a> page on the CRAN, I was recently alerted to a duplicate key on the keyserver.ubuntu.com website. If you <a href="http://keyserver.ubuntu.com/pks/lookup?search=0xE084DAB9&amp;op=vindex">search</a> for my key using the short ID string, you will find two keys listed.</p>
+<p>One of the keys is mine, uid “Michael Rutter”. The other key, even though the date suggests otherwise, appears to be new. The uid is “Totally Legit Signing Key”. I am fairly certain that this key was placed there to demonstrate that using the short key ID is flawed, as it is easy to create a key using brute force that matches my key. This is called an key id collision. If you do a google search, you can find a similar key on another Ubuntu related project. I don’t think there was any malicious intent, but I think it is something to be aware of.</p>
+<p>If you recently added my key using the methods describe on CRAN, it may have downloaded two keys. You can check this by running <code>gpg --list-keys</code>. If the other key has been added to your machine, you should see “Totally Legit Signing Key” listed as rsa1024 with a long id of CF805866AEBD82665423554F4359ED62E084DAB9.</p>
+<p>You can delete this key by running <code>gpg -delete-key &quot;Totally Legit Signing Key&quot;</code>. <code>sudo</code> may be needed, depending on your individual setup.</p>
+<p>To prevent this from happening in the future, I have changed the directions on CRAN to install my public key using a longer key id. This will only download my key.</p>
+<p>There is no reason to believe that any of the packages on CRAN have been compromised using this key. Comprimised pacakges signed with this bogus key would have to have been placed on my server located behind a firewall at a large research university. I think this is highly unlikely, as only files on that server are synced to CRAN.</p>
+<p>If you have any questions or concerns, please contact me.</p>
+
 
   
-    <li><time>18 Jun 2018, 08:00</time> - <a href="/post/2018-06-18-june-17-c2d4u-update/">June 17th, 2018 c2d4u update</a></li>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/c2d4u-august-18th-update/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/c2d4u-august-18th-update/">c2d4u August 18th Update</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="/post/august-25th-c2d4u-update/">August 25th c2d4u Update</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="/post/august-25th-c2d4u-update/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
 
   
-    <li><time>10 Jun 2018, 11:20</time> - <a href="/post/2018-06-10-june-9-18-c2d4u-update/">June 9th, 2018 c2d4u Update: 81 updated/new packages</a></li>
 
-  
-    <li><time>10 Jun 2018, 11:20</time> - <a href="/post/2018-06-11-r-3.5-on-debian-and-ubuntu-update/">June 11th, 2018 R 3.5.0 on Debian and Ubuntu: An Update</a></li>
-
-  
-    <li><time>03 Jun 2018, 11:05</time> - <a href="/post/2018-06-03-june-2-18-c2d4u-update/">June 2nd, 2018 c2d4u Update: 21 updated/new packages</a></li>
-
-  
-    <li><time>31 May 2018, 15:12</time> - <a href="/post/2018-05-31-c2d4u-bioconductor-update/">c2d4u Update: Adding New Bioconductor Release</a></li>
-
-  
-    <li><time>27 May 2018, 19:01</time> - <a href="/post/2018-05-27-c2d4u-update-230-new-and-updated-pacakges/">c2d4u Update: 230 New and Updated Pacakges</a></li>
-
-  
-    <li><time>26 May 2018, 14:48</time> - <a href="/post/2018-05-25-announcing-c2d4u3-5/">Announcing cran2deb4ubuntu3.5</a></li>
-
-  
-    <li><time>23 May 2018, 08:10</time> - <a href="/post/2018-05-23-adding-jq-trusty-xenial/">Adding jq library to Trusty and Xenial PPAs</a></li>
-
-  
-    <li><time>22 May 2018, 20:52</time> - <a href="/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/">Replacing weatherunderground.com data with...weatherunderground?</a></li>
-
-  
-    <li><time>20 May 2018, 12:50</time> - <a href="/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/">Update on the Move to R 3.5.0</a></li>
-
-  
-  </ul>
-  
 </div>
 
 </div>
