@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/november-18th-c2d4u-update/</loc>
+    <lastmod>2018-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/august-25th-c2d4u-update/</loc>
     <lastmod>2018-08-29T00:00:00+00:00</lastmod>
   </url>
@@ -96,7 +101,7 @@
   
   <url>
     <loc>/tags/c2d4u/</loc>
-    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,13 +119,13 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -132,7 +137,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -150,7 +155,7 @@
   
   <url>
     <loc>/tags/ubuntu/</loc>
-    <lastmod>2018-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

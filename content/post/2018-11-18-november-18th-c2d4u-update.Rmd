@@ -1,0 +1,36 @@
+---
+title: November 18th c2d4u Update
+author: Michael Rutter
+date: '2018-11-18'
+slug: november-18th-c2d4u-update
+categories:
+  - c2d4u
+  - R
+  - Ubuntu
+tags:
+  - c2d4u
+  - R
+  - Ubuntu
+description: ''
+topics: []
+---
+
+86 new or updated packages added to c2d4u this weekend.  The new CRAN Task View [Missing Data](https://cran.r-project.org/web/views/MissingData.html), which was added last month.
+
+A number of packages require R 3.5, so the number of packages updated on the R 3.5 version of c2d4u is less.  Also, the [rstan](https://cran.r-project.org/package=rstan) package, and anything related are not available for Trusty.  This is due to the need of the C++14 standard for `rstan`.  If there are any suggestions on how to get this to build on Launchpad, let me know.
+
+PPA for packages built against R 3.4.*: [c2d4u](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u)
+
+PPA for packages built against R 3.5.*: [c2d4u3.5](https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5)
+
+```{r echo=FALSE, message=FALSE}
+library(XML)
+library(knitr)
+url <- "http://192.168.1.129/cran2deb/latest_packages.html"
+all.pkgs <- readHTMLTable(url)[[2]]
+build.date <- as.Date("2018-11-16")
+all.pkgs <- data.frame(lapply(all.pkgs, as.character), stringsAsFactors=FALSE)
+#sum(as.Date(all.pkgs$date_stamp)>build.date)
+new.pkgs <- all.pkgs[as.Date(all.pkgs$date_stamp)>build.date,]
+kable(new.pkgs[,2:3],row.names = FALSE)
+```
