@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 18 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cosmic Cuttlefish (18.10) on CRAN</title>
+      <link>/post/cosmic-cuttlefish-18-10-on-cran/</link>
+      <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/cosmic-cuttlefish-18-10-on-cran/</guid>
+      <description>&lt;p&gt;R packages for Cosmic Cuttlefish (18.10) have been added to the &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5&#34;&gt;RRutter3.5 PPA&lt;/a&gt; and therefore have been mirrored to &lt;a href=&#34;https://cran.r-project.org/bin/linux/ubuntu/&#34;&gt;CRAN&lt;/a&gt;. These are the base packages for R, plus the recommended packages as well as a couple of others (jags, ess, rpy2, and littler). Most of these are already available in the standard 18.10 repositories, but as packages are updated, I will update them for CRAN.&lt;/p&gt;
+&lt;p&gt;Since the lifespan of Cosmic Cuttlefish is so short (support ends July 2019), I will not be creating a version of c2d4u for Cosmic. If you want access to all of those packages, I suggest sticking to an LTS. And with Ubuntu’s announcement that support for Bionic (18.04) has been extended to 10 years, it will be around for a while.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>November 18th c2d4u Update</title>
