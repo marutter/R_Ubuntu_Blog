@@ -7,10 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R 4.0 Now Available</title>
+      <link>/post/r-4-0-now-available/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/r-4-0-now-available/</guid>
+      <description>&lt;p&gt;Ubuntu binaries for R 4.0, the newest release, are now available in the usual locations, with some caveats. As with previous transitions to major releases, 4.0 binaries are have their own PPA or in their own directory on CRAN.&lt;/p&gt;
+&lt;div id=&#34;launchpad-ppa&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Launchpad PPA&lt;/h2&gt;
+&lt;p&gt;If you like to use Launchpad PPAs, the R 4.0 binaries can be found at &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/rrutter4.0&#34;&gt;RRutter 4.0&lt;/a&gt;. The recommended packages built against 4.0 can also be found here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cran&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;CRAN&lt;/h2&gt;
+&lt;p&gt;Binaries can also be found at the CRAN website in the &lt;a href=&#34;https://cran.r-project.org/bin/linux/ubuntu/&#34;&gt;Ubuntu folder&lt;/a&gt;. This website is synced with the PPA every 12 hours, so please be patient as the files and readme are updated. To use the R 4.0 binaries, the apt entry would be “deb &lt;a href=&#34;https://cloud.r-project.org/bin/linux/ubuntu&#34; class=&#34;uri&#34;&gt;https://cloud.r-project.org/bin/linux/ubuntu&lt;/a&gt; bionic-cran40/”. This would add the 4.0 binaries of Bionic. Full details are available on CRAN.&lt;/p&gt;
+&lt;p&gt;Adding a new major release to CRAN Ubuntu website has many steps, so if you are using the CRAN repository any you have any issues, please let me know.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-4.0-with-existing-binaries-and-c2d4u&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Using 4.0 with existing binaries and c2d4u&lt;/h2&gt;
+&lt;p&gt;As with every recent major R release, packages built against the R 3.5/3.6 series are not compatible with R 4.0. That means packages will need to be rebuilt is you install R 4.0.&lt;/p&gt;
+&lt;p&gt;If you are using packages installed from source, Dirk Eddelbuettel has an excellent &lt;a href=&#34;http://dirk.eddelbuettel.com/blog/2020/04/26/#026_upgrade_to_R400&#34;&gt;blog post on moving to 4.0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you use some of binary packages available in Universe or my &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;cran2deb4ubuntu&lt;/a&gt; project, you will need to patient as the binaries are built. First, you should be aware that there is a new 4.0 c2d4u PPA - &lt;a href=&#34;https://launchpad.net/~c2d4u.team/+archive/ubuntu/c2d4u4.0+&#34;&gt;https://launchpad.net/~c2d4u.team/+archive/ubuntu/c2d4u4.0+&lt;/a&gt;. Notice the change from “marutter” to “c2d4u.team” as the PPA location. Also, the PPA is called “c2d4u4.0+”, an indication that this will be the repository that contains packages for R 4.0 and beyond until the next major release.&lt;/p&gt;
+&lt;p&gt;As of this blog post, the status of the last three long term service (LTS) releases of Ubuntu varies. For Focal (20.04), I have rebuilt all the binaries available in Universe, but not the additional packages usually found in c2d4u. For Bionic (18.04), there are around 2,800 packages available with more coming every day. After the Focal and Bionic packages are built, I will start with the Xenial (16.04) backport. I will not be supporting R 4.0 for Trusty (14.04).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;future-of-c2d4u-for-r-3.5-and-r-4.0-releases&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Future of c2d4u for R 3.5 and R 4.0 releases&lt;/h2&gt;
+&lt;p&gt;For the foreseeable future, I will be building new and updated packages from the CRAN Task Views against both R 3.5 and R 4.0. At some point, building against R 3.5 will become problematic as packages will slowly begin to require 4.0. At that point I will freeze the c2d4u for 3.5 and only support R 4.0. Please be patient with packages in c2d4u, as I am trying to build against 4.0 and update the 3.5 PPA at the same time.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Cosmic Cuttlefish (18.10) on CRAN</title>
