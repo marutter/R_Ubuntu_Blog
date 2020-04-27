@@ -3,6 +3,7 @@ title: R 4.0 Now Available
 author: Michael Rutter
 date: '2020-04-27'
 slug: r-4-0-now-available
+draft: false
 categories:
   - R
   - Ubuntu
