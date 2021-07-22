@@ -2,7 +2,7 @@
 title: 'Ubuntu CRAN reposirory: Replacing apt-key'
 author: Michael Rutter
 date: '2021-07-22'
-slug: []
+slug: [replacing apt-key]
 categories:
   - R
   - Ubuntu
