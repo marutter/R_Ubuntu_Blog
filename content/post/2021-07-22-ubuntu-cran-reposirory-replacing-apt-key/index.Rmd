@@ -17,7 +17,7 @@ topics: []
 
 If you have used `apt-key` on Ubuntu (or Debian) recently, you may mave noticed a message along the lines of *Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8))*.  The final Ubuntu release with apt-key will be Ubuntu 22.04.
 
-As the warning suggests, keyring files should be located in the `/etc/apt/trusted.gpg.d/` directory.  First step is to download my .asc key file, which is an armored, ASCII version of my public key file.
+As the warning suggests, keyring files should be located in the `/etc/apt/trusted.gpg.d/` directory.  The first step is to download my .asc key file, which is an armored, ASCII version of my public key file.
 
 ```{bash, eval=FALSE}
 wget https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc
@@ -31,7 +31,7 @@ gpg --show-keys ./marutter_pubkey.asc
 
 The resulting output should contain my fingerprint E298A3A825C0D65DFD57CBB651716619E084DAB9 with an expiration date of 2027-09-30.
 
-Once you have verified the key, you can copy the .asc file to `/etc/apt/trusted.gpg.d/`.  It is also possible to download the file and copy it to the proper direcotry with the following command:
+Once you have verified the key, you can copy the .asc file to `/etc/apt/trusted.gpg.d/`.  It is also possible to download the file and copy it to the proper directory with the following command:
 
 ```{bash,eval=FALSE}
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc

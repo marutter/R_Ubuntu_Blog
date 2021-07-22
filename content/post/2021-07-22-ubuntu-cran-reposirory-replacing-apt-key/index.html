@@ -19,12 +19,12 @@ topics: []
 <div id="replacing-apt-key-on-ubuntu-cran" class="section level1">
 <h1>Replacing apt-key on Ubuntu CRAN</h1>
 <p>If you have used <code>apt-key</code> on Ubuntu (or Debian) recently, you may mave noticed a message along the lines of <em>Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8))</em>. The final Ubuntu release with apt-key will be Ubuntu 22.04.</p>
-<p>As the warning suggests, keyring files should be located in the <code>/etc/apt/trusted.gpg.d/</code> directory. First step is to download my .asc key file, which is an armored, ASCII version of my public key file.</p>
+<p>As the warning suggests, keyring files should be located in the <code>/etc/apt/trusted.gpg.d/</code> directory. The first step is to download my .asc key file, which is an armored, ASCII version of my public key file.</p>
 <pre class="bash"><code>wget https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc</code></pre>
 <p>It should be noted that the .asc public key file is no longer stored on a keyserver, but in the Ubuntu directory on CRAN. To verify that this is indeed my public key file, run</p>
 <pre class="bash"><code>gpg --show-keys ./marutter_pubkey.asc   </code></pre>
 <p>The resulting output should contain my fingerprint E298A3A825C0D65DFD57CBB651716619E084DAB9 with an expiration date of 2027-09-30.</p>
-<p>Once you have verified the key, you can copy the .asc file to <code>/etc/apt/trusted.gpg.d/</code>. It is also possible to download the file and copy it to the proper direcotry with the following command:</p>
+<p>Once you have verified the key, you can copy the .asc file to <code>/etc/apt/trusted.gpg.d/</code>. It is also possible to download the file and copy it to the proper directory with the following command:</p>
 <pre class="bash"><code>wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc</code></pre>
 <p>This information has been added to the readme files on the CRAN Ubuntu site.</p>
 </div>
