@@ -1,10 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/</loc>
+    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ubuntu/</loc>
+    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021-07-22-ubuntu-cran-reposirory-replacing-apt-key/</loc>
+    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/c2d4u/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/r-4-0-now-available/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/3.5/</loc>
+    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -43,6 +78,11 @@
   </url>
   
   <url>
+    <loc>/tags/debian/</loc>
+    <lastmod>2018-06-10T11:20:33-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-06-11-r-3.5-on-debian-and-ubuntu-update/</loc>
     <lastmod>2018-06-10T11:20:33-05:00</lastmod>
   </url>
@@ -58,12 +98,37 @@
   </url>
   
   <url>
+    <loc>/tags/bioconductor/</loc>
+    <lastmod>2018-05-31T15:12:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-05-31-c2d4u-bioconductor-update/</loc>
     <lastmod>2018-05-31T15:12:00-05:00</lastmod>
   </url>
   
   <url>
+    <loc>/topics/c2d4u/</loc>
+    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-05-27-c2d4u-update-230-new-and-updated-pacakges/</loc>
+    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/topics/r/</loc>
+    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/topics/</loc>
+    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/topics/ubuntu/</loc>
     <lastmod>2018-05-27T19:01:26-04:00</lastmod>
   </url>
   
@@ -83,6 +148,11 @@
   </url>
   
   <url>
+    <loc>/tags/webscraping/</loc>
+    <lastmod>2018-05-22T20:52:49-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-05-20-an-update-on-the-move-to-r-3-5-0/</loc>
     <lastmod>2018-05-20T12:50:00-05:00</lastmod>
   </url>
@@ -93,92 +163,13 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2018-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/contact/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/3.5/</loc>
-    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/bioconductor/</loc>
-    <lastmod>2018-05-31T15:12:00-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/c2d4u/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/topics/c2d4u/</loc>
-    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/debian/</loc>
-    <lastmod>2018-06-10T11:20:33-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/topics/r/</loc>
-    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2018-11-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/topics/</loc>
-    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ubuntu/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/topics/ubuntu/</loc>
-    <lastmod>2018-05-27T19:01:26-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/webscraping/</loc>
-    <lastmod>2018-05-22T20:52:49-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

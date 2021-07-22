@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bioconductor on R Ubuntu Blog</title>
@@ -6,7 +5,7 @@
     <description>Recent content in Bioconductor on R Ubuntu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <copyright>&amp;copy; 2018-2021. All rights reserved.</copyright>
     <lastBuildDate>Thu, 31 May 2018 15:12:00 -0500</lastBuildDate>
     
         <atom:link href="/tags/bioconductor/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +17,10 @@
       <pubDate>Thu, 31 May 2018 15:12:00 -0500</pubDate>
       
       <guid>/post/2018-05-31-c2d4u-bioconductor-update/</guid>
-      <description>&lt;p&gt;When R 3.5 was released, the good folks at the &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt; project also released a new version, 3.7. Since I was rebuilding for R 3.5, I didn’t immediately include the updates to Bioconductor in my builds. I have now taken the time to include the update, so there are an additional 83 updated/new packages on c2d4u. (&lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u&#34;&gt;3.4&lt;/a&gt; or &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;3.5&lt;/a&gt; versions)&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;When R 3.5 was released, the good folks at the &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt; project also released a new version, 3.7. Since I was rebuilding for R 3.5, I didn’t immediately include the updates to Bioconductor in my builds. I have now taken the time to include the update, so there are an additional 83 updated/new packages on c2d4u. (&lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u&#34;&gt;3.4&lt;/a&gt; or &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34;&gt;3.5&lt;/a&gt; versions)&lt;/p&gt;
 &lt;p&gt;My PPAs do not provide all the Bioconductor packages. Some are included in a &lt;a href=&#34;https://cran.r-project.org/web/views/&#34;&gt;CRAN Task View&lt;/a&gt;, therefore they are included in c2d4u. Others are included in Ubuntu Universe, and with the move to R 3.5, I have made an attempt to rebuild those for compatibility.&lt;/p&gt;
 &lt;p&gt;Some of the packages (&lt;code&gt;BiocInstaller&lt;/code&gt; for example) require R 3.5. Obviously, these do not build against R 3.4, but older versions of the packages are available on the PPAs. If you want to use Bioconductor 3.7, I highly suggest upgrading to R 3.5.&lt;/p&gt;
 &lt;table&gt;

@@ -5,9 +5,11 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.46" />
+  <meta name="generator" content="Hugo 0.68.3" />
 
   <title>Replacing weatherunderground.com data with...weatherunderground? &middot; R Ubuntu Blog</title>
+
+    
 
   
   
@@ -30,20 +32,21 @@
   <link rel="stylesheet" href="/css/blackburn.css">
 
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
   
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
   
 
   
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
   
   <script>hljs.initHighlightingOnLoad();</script>
   
@@ -109,7 +112,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://twitter.com/marutterstat" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+      <a class="pure-menu-link" href="https://twitter.com/marutterstat" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
 
@@ -142,10 +145,8 @@
     
 
     
-
-    
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/marutterstat" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+      <a class="pure-menu-link" href="https://linkedin.com/in/marutterstat" rel="me" target="_blank"><i class="fab fa-linkedin fa-fw"></i>LinkedIn</a>
     </li>
     
 
@@ -161,7 +162,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/marutter" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+      <a class="pure-menu-link" href="https://github.com/marutter" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
 
@@ -195,7 +196,7 @@
 
   <div>
   <div class="small-print">
-    <small>&copy; 2018. All rights reserved.</small>
+    <small>&copy; 2018-2021. All rights reserved.</small>
   </div>
   <div class="small-print">
     <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
@@ -242,7 +243,10 @@
 
 </div>
 
-  <p>One of the research projects I have been working on for many years is a model that predicts <em>E. coli</em> levels at <a href="http://www.dcnr.pa.gov/StateParks/FindAPark/PresqueIsleStatePark/Pages/default.aspx">Presque Isle State Park</a> beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.</p>
+  
+
+
+<p>One of the research projects I have been working on for many years is a model that predicts <em>E. coli</em> levels at <a href="http://www.dcnr.pa.gov/StateParks/FindAPark/PresqueIsleStatePark/Pages/default.aspx">Presque Isle State Park</a> beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.</p>
 <p>An important data source for the model is weather data collected at the Erie International Airport, located a couple of miles from the park entrance. I used airport data as opposed to other data sources located at the park due to consistency of data collection, both historically and for future predictions. A wonderful place to get the data of the internet <em>was</em> weatherunderground.com. Very simple URL structure, and there was an option on every page to download the main data table as a .csv file. Since my model only needed to request data twice from the website to run, it was a great solution.</p>
 <p>Then weatherunderground.com was bought by IBM in 2015. In late 2017, the csv option was removed from the website, but the API was still in place. Then earlier this year, the free API was discontinued and the only way to access the data is to buy access at a price unspecified on the website. I won’t even begin the discussion that we have been feeding data into weatherunderground.com from a personal weather station at my house for the last three years, and now have lost access to that data. Needless to say, my model broke. A couple of R packages (<code>rwundergound</code> and <code>weatherData</code>) were discontinued as a result of the policy changes.</p>
 <p>As we prepare for another swimming season, it was off to find another data source. Trick was finding a source that matched the data I had already collected and utilized by the model. My search came up short, as no single source of data had the same information. So reluctantly, I returned to weatherunderground.com The data that I need was on the web page, I would just have to scrape it using <code>rvest</code>. With a little help from Chrome to find the XPath, I can download a summer’s worth of data for KERI.</p>
@@ -261,6 +265,46 @@ daily &lt;- get_forecast_for(42.0803,-80.1824,&quot;2017-05-01T12:00:00-0500&quo
 daily[[1]]$windBearing
 daily[[1]]$cloudCover</code></pre>
 <p>Combining these two data sources recreates what weatherunderground.com used to provide. It should be noted that Dark Sky has a slightly different definition of a day for their API, calculating daily averages from 4AM to 4AM, not midnight to midnight. I compared data for previous years and the differences were negligible. While not a perfect solution, it is enough to keep RoboHarry running.</p>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
 
 
   
@@ -295,6 +339,10 @@ daily[[1]]$cloudCover</code></pre>
 </div>
 
 
+  
+  
+  
+  
 
   
 
@@ -303,21 +351,31 @@ daily[[1]]$cloudCover</code></pre>
 </div>
 </div>
 <script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
 
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'Your Google Analytics tracking ID', 'auto');
-  ga('send', 'pageview');
-
+    ga('create', 'Your Google Analytics tracking ID', 'auto');
+    ga('send', 'pageview');
+  }
 </script>
 
 
 
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>

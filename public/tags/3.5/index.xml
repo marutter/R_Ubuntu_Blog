@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3.5 on R Ubuntu Blog</title>
@@ -6,7 +5,7 @@
     <description>Recent content in 3.5 on R Ubuntu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <copyright>&amp;copy; 2018-2021. All rights reserved.</copyright>
     <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/3.5/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +17,10 @@
       <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/cosmic-cuttlefish-18-10-on-cran/</guid>
-      <description>&lt;p&gt;R packages for Cosmic Cuttlefish (18.10) have been added to the &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5&#34;&gt;RRutter3.5 PPA&lt;/a&gt; and therefore have been mirrored to &lt;a href=&#34;https://cran.r-project.org/bin/linux/ubuntu/&#34;&gt;CRAN&lt;/a&gt;. These are the base packages for R, plus the recommended packages as well as a couple of others (jags, ess, rpy2, and littler). Most of these are already available in the standard 18.10 repositories, but as packages are updated, I will update them for CRAN.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;R packages for Cosmic Cuttlefish (18.10) have been added to the &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/rrutter3.5&#34;&gt;RRutter3.5 PPA&lt;/a&gt; and therefore have been mirrored to &lt;a href=&#34;https://cran.r-project.org/bin/linux/ubuntu/&#34;&gt;CRAN&lt;/a&gt;. These are the base packages for R, plus the recommended packages as well as a couple of others (jags, ess, rpy2, and littler). Most of these are already available in the standard 18.10 repositories, but as packages are updated, I will update them for CRAN.&lt;/p&gt;
 &lt;p&gt;Since the lifespan of Cosmic Cuttlefish is so short (support ends July 2019), I will not be creating a version of c2d4u for Cosmic. If you want access to all of those packages, I suggest sticking to an LTS. And with Ubuntu’s announcement that support for Bionic (18.04) has been extended to 10 years, it will be around for a while.&lt;/p&gt;
 </description>
     </item>
@@ -29,7 +31,10 @@
       <pubDate>Sun, 10 Jun 2018 11:20:33 -0500</pubDate>
       
       <guid>/post/2018-06-11-r-3.5-on-debian-and-ubuntu-update/</guid>
-      <description>&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+      <description>
+
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview&lt;/h1&gt;
 &lt;p&gt;R 3.5.0 was &lt;a href=&#34;https://stat.ethz.ch/pipermail/r-announce/2018/000628.html&#34;&gt;released&lt;/a&gt; a few weeks ago. As it changes some (important) internals, packages installed with a previous version of R have to be rebuilt. This was known and expected, and we took several measured steps to get R binaries to everybody without breakage.&lt;/p&gt;
 &lt;p&gt;The question of &lt;em&gt;but how do I upgrade without breaking my system&lt;/em&gt; was asked a few times, &lt;em&gt;e.g.&lt;/em&gt;, on the &lt;a href=&#34;https://stat.ethz.ch/mailman/listinfo/r-sig-debian&#34;&gt;r-sig-debian list&lt;/a&gt; as well as in &lt;a href=&#34;https://stackoverflow.com/a/50076739/143305&#34;&gt;this StackOverflow question&lt;/a&gt;.&lt;/p&gt;
@@ -67,7 +72,10 @@
       <pubDate>Sat, 26 May 2018 14:48:00 -0500</pubDate>
       
       <guid>/post/2018-05-25-announcing-c2d4u3-5/</guid>
-      <description>&lt;p&gt;After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34; class=&#34;uri&#34;&gt;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&lt;/a&gt;&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;After building 10,742 packages on Launchpad, I would like announce that cran2deb4ubuntu3.5 (c2d4u3.5 for short) is now available for testing and maybe even actually use. It wasn’t difficult to find if you know your way around launchpad, but you can find the PPA here: &lt;a href=&#34;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&#34; class=&#34;uri&#34;&gt;https://launchpad.net/~marutter/+archive/ubuntu/c2d4u3.5&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Many things to consider before you add this PPA to your Ubuntu machine.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The PPA supplies binaries for Trusty (14.04), Xenial (16.04), and Bionic (18.04).&lt;/p&gt;&lt;/li&gt;

@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.68.3" />
 
-  <title>webscraping &middot; R Ubuntu Blog</title>
+  <title>Ubuntu CRAN reposirory: Replacing apt-key &middot; R Ubuntu Blog</title>
 
     
 
@@ -42,9 +42,6 @@
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="R Ubuntu Blog"
-    href='/tags/webscraping/index.xml' />
   
 
   
@@ -109,11 +106,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href='/tags/webscraping/index.xml'><i
-          class="fas fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -219,24 +211,23 @@
 
 
 <div class="header">
-  <h1>webscraping</h1>
+  <h1>Ubuntu CRAN reposirory: Replacing apt-key</h1>
+  <h2></h2>
 </div>
-
 <div class="content">
-  
-    <article>
-  <header>
-    <h2><a href="/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/">Replacing weatherunderground.com data with...weatherunderground?</a></h2>
 
-    <div class="post-meta">
+  <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>22 May 2018, 20:52</time>
+    <time>22 Jul 2021, 00:00</time>
   </div>
 
   
 
+  
+  
+  
   
 
   
@@ -247,7 +238,7 @@
     
       <a class="post-taxonomy-tag" href="/tags/r">R</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="/tags/webscraping">webscraping</a>
+      <a class="post-taxonomy-tag" href="/tags/ubuntu">Ubuntu</a>
     
   </div>
   
@@ -255,20 +246,97 @@
 
 </div>
 
-  </header>
+  
+<script src="/post/2021-07-22-ubuntu-cran-reposirory-replacing-apt-key/index_files/header-attrs/header-attrs.js"></script>
 
-  <p>
-  One of the research projects I have been working on for many years is a model that predicts E. coli levels at Presque Isle State Park beaches in Erie, PA. Presque Isle State Park brings in approximately 4.5 million visitors a year, and thanks to the Pennsylvania State Park system, is 100% free to use. A variety of different tools are used to protect swimmers from harmful bacteria, including my random forest model RoboHarry, named after the former lead ranger at the park.
-  </p>
+
+<div id="replacing-apt-key-on-ubuntu-cran" class="section level1">
+<h1>Replacing apt-key on Ubuntu CRAN</h1>
+<p>If you have used <code>apt-key</code> on Ubuntu (or Debian) recently, you may mave noticed a message along the lines of <em>Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8))</em>. The final Ubuntu release with apt-key will be Ubuntu 22.04.</p>
+<p>As the warning suggests, keyring files should be located in the <code>/etc/apt/trusted.gpg.d/</code> directory. The first step is to download my .asc key file, which is an armored, ASCII version of my public key file.</p>
+<pre class="bash"><code>wget https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc</code></pre>
+<p>It should be noted that the .asc public key file is no longer stored on a keyserver, but in the Ubuntu directory on CRAN. To verify that this is indeed my public key file, run</p>
+<pre class="bash"><code>gpg --show-keys ./marutter_pubkey.asc   </code></pre>
+<p>The resulting output should contain my fingerprint E298A3A825C0D65DFD57CBB651716619E084DAB9 with an expiration date of 2027-09-30.</p>
+<p>Once you have verified the key, you can copy the .asc file to <code>/etc/apt/trusted.gpg.d/</code>. It is also possible to download the file and copy it to the proper directory with the following command:</p>
+<pre class="bash"><code>wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc</code></pre>
+<p>This information has been added to the readme files on the CRAN Ubuntu site.</p>
+</div>
 
   
-  <footer>
-    <a href="/post/2018-05-22-replacing-weatherundergound-com-data-with-weatherundergound-com/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2f2021-07-22-ubuntu-cran-reposirory-replacing-apt-key%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2f2021-07-22-ubuntu-cran-reposirory-replacing-apt-key%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2f2021-07-22-ubuntu-cran-reposirory-replacing-apt-key%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2f2021-07-22-ubuntu-cran-reposirory-replacing-apt-key%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2f2021-07-22-ubuntu-cran-reposirory-replacing-apt-key%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2f2021-07-22-ubuntu-cran-reposirory-replacing-apt-key%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
 
   
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/r-4-0-now-available/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/r-4-0-now-available/">R 4.0 Now Available</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+
 </div>
 
 </div>
@@ -300,3 +368,4 @@
 
 </body>
 </html>
+
